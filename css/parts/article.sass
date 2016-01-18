@@ -1,0 +1,78 @@
+//Article elements
+article
+  padding: 1em 0
+  @include media($small-screen)
+    padding: 2em 0
+  header
+    padding: 2em 0 0 0
+    margin-bottom: 1em
+  .icon
+    background-color: $primary-color
+    display: block
+    width: 30px
+    height: 30px
+    padding: 0.25em
+    border-radius: 50%
+    margin-right: 0.5em
+    float: left
+    &:hover
+      background-color: $accent-color
+  h3
+    margin-bottom: 0.5em
+  .postinfo
+    width: 100%
+    display: block
+    color: $primary-color
+  .author
+    color: $accent-color
+    margin: 1em 0
+    display: block
+    &:hover
+      color: darken($accent-color, 15)
+.stage
+  @include span-columns(9)
+  @include media($small-screen)
+    @include span-columns(6)
+.sidebarwrap
+  @include span-columns(3)
+  @include media($small-screen)
+    @include span-columns(6)
+.news
+  width: 100%
+  position: relative
+  padding: 0 0 1em 3em
+  @include span-columns(6)
+  @include omega(2n)
+  @include media($small-screen)
+    @include span-columns(6)
+  p
+    color: $base-font-color-lightest
+  h5
+    margin-bottom: 0.25em
+    a
+      color: $primary-color
+      &:hover
+        color: $base-font-color-lightest
+  .cat-icon
+    position: absolute
+    top: -0.5em
+    left: 0
+    background-color: $primary-color
+    display: block
+    width: 40px
+    height: 40px
+    padding: 0.25em
+    border-radius: 50%
+    &:hover
+      background-color: $base-font-color-light
+      box-shadow: 0 0 2px black
+
+.post-utilities
+  @include outer-container
+  margin-top: 4em
+  @include media($small-screen)
+    text-align: center
+
+hr.dark
+  border: 0
+  border-top: 1px solid $base-blue-color

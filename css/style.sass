@@ -1,0 +1,31 @@
+@import 'tools/tools-index'
+@import 'parts/webfonts'
+$serif: 'PFCentroSerifPro-Regular', serif
+$sans: 'pfcentrosanspro-light', san-serif
+$headline-font: 'PFCentroSerifPro-Regular', serif
+
+$small-break: 740px
+
+@mixin transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+@import 'parts/colors'
+@import 'parts/header'
+@import 'parts/intro'
+@import 'parts/news'
+
+
+body
+  background-color: white
+  font-family: $sans
+h1, h2, h3, h4, h5, h6
+  font-family: $headline-font
+  color: $primary-color
+.wrapper
+  position: relative
+  max-width: 1280px
+  margin: 0 auto

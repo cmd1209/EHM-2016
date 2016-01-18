@@ -1,0 +1,134 @@
+// hero elements
+section.hero
+  height: 500px
+  position: relative
+  background-color: $base-color
+  // @include media($small-screen)
+  //   display: none
+  .slides
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    text-align: center
+    background:
+      color: $primary-color
+      // color: $accent-color2
+      position: center center!important
+      size: cover!important
+      repeat: no-repeat!important
+    background-blend-mode: multiply
+
+// ++++ funny blending animaton with keyframes +++++
+//     -webkit-animation: slidecolor 1s infinite
+//     -moz-animation: slidecolor 1s infinite
+//     animation: slidecolor 1s infinite
+
+// @include keyframes(slidecolor)
+//   0%
+//     background-color: pink
+//   50%
+//     background-color: $accent-color2
+//   100%
+//     background-color: pink
+
+.lockup-container
+  @include outer-container
+.lockup
+  position: absolute
+  bottom: 0
+  left: 0
+  z-index: 888
+  padding: 2em
+  width: 100%
+  background-color: rgba($darkest-gray,0.85)
+  text-align: center
+  @include media($small-screen)
+    background-color: rgba($darkest-gray,0.85)
+    padding: 1em
+  h2
+    font-size: 2.15em
+    text-shadow: 0 2px 3px black
+    color: white
+    // text-transform: uppercase
+    vertical-align: center
+  h2.textshift
+    font-size: 1.4em
+    text-transform: none
+    color: $light-gray
+    font-family: 'Libre Baskerville', serif
+    line-height: 1.6em
+    margin-top: 0.5em
+.centralt:after
+  content: ""
+  position: absolute
+  left: 50%
+  top: 0
+  @include triangle(75px, white, down)
+  +transform(translateX(-50%))
+  z-index: 999
+  @include media($small-screen)
+    display: none
+
+.small
+  min-height: 300px!important
+.rundgang
+  min-height: 485px
+  background:
+    position: bottom center!important
+    size: cover!important
+    repeat: no-repeat!important
+
+.slogan-container
+  @include outer-container
+  h2
+    text-align: center
+    position: absolute
+    color: white
+    text-shadow: 2px 2px 1em black
+    padding: 2em
+    z-index: 999
+    left: 50%
+    top: 50%
+    +transform(translate(-50%, -50%))
+
+.adjective
+  position: absolute
+  left: 1.5em
+  bottom: 4em
+  color: white!important
+  opacity: 0.4
+  filter: alpha(opacity=40) /* For IE8 and earlier */
+  font-size: 3em
+
+.rundgang-caption
+  padding: 2em 1em 1em 1em
+  text-align: center
+  h2
+    color: $accent-color2
+  h5
+    margin-top: 1em
+    font-size: 1.2em
+.owl-carousel
+  margin-bottom: 2em
+
+// $class-slug: slogan !default
+// @for $i from 1 through 4
+//   .#{$class-slug}-#{$i}
+//     font-size: random(5) + em
+.adjective
+  -webkit-animation: blur 15s infinite
+  -moz-animation: blur 15s infinite
+  animation: blur 15s infinite
+
+@-webkit-keyframes blur
+  0%
+    @include filter(blur(6px))
+  50%
+    @include filter(blur(1px))
+  100%
+    @include filter(blur(6px))
+

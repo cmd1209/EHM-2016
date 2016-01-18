@@ -1,0 +1,20 @@
+// Room elements
+section.rooms
+  background-color: $darkest-gray
+  color: $base-font-color-light
+  h1, h2, h3, h4, h5, h6
+    color: $primary-color
+#menu-rooms
+  @include background(linear-gradient($base-blue-color, $darkest-gray) left repeat)
+  padding: 1em
+  @include media($small-screen)
+    text-align: center
+  li
+    text-align: right
+    padding: 0.25em 0em
+    @include media($small-screen)
+      display: inline-block
+      padding: 0.5em
+  li.current-menu-item
+    a
+      color: $base-font-color-light

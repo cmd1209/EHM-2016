@@ -1,0 +1,68 @@
+.contentwrap
+  position: relative
+#mobilewrap
+  padding: 0 1em 0 0
+  position: fixed
+  height: 100%
+  max-width: 100%
+  top: 0
+  bottom: 0
+  z-index: 1001
+  background-color: $darkest-gray
+  display: block
+
+.is-hidden
+  +transform(translateX(-100%))
+  @include transition (all 0.5s ease-in-out)
+
+.is-visible
+  +transform(translateX(0px))
+  @include transition (all 0.4s ease-in-out)
+  -webkit-box-shadow: 5px 0px 20px -5px black
+  -moz-box-shadow: 5px 0px 20px -5px black
+  box-shadow: 5px 0px 20px -5px black
+
+.mobileactivator
+  display: none
+  z-index: 9999
+  position: fixed
+  top: 0.5em
+  left: 0.5em
+  color: white
+  border: 3px solid rgba(white, 0.9)
+  width: 2em
+  height: 2em
+  border-radius: 50%
+  text-align: center
+  line-height: 1.8em
+  @include transition (all 0.25s ease-in-out)
+  &:hover
+    background-color: $accent-color
+    border: 3px solid lighten($accent-color, 10)
+    color: lighten($primary-color, 15)
+  @include media($small-screen)
+    display: block
+
+nav.mobile
+  text-align: left
+  padding: 3em 0
+  height: 100%
+  li
+    list-style: none
+    &:last-child
+      border: none
+  a
+    text-transform: uppercase
+    padding: 0.5em 1em
+    display: block
+    color: white
+    border-left: 0em solid $accent-color2
+    @include transition (all 0.25s ease-in-out)
+    &:hover
+      color: $primary-color
+      border-left: 1em solid $primary-color
+      @include transition (all 0.25s ease-in-out)
+  li.current-menu-item
+    a
+      color: $primary-color
+      border-left: 1em solid $primary-color

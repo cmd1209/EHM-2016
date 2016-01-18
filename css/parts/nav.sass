@@ -1,0 +1,250 @@
+//navigation elements
+header.header
+  position: relative
+  background-color: $accent-color2
+  background-image: url(../img/h-footer.svg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  min-height: 9em
+.bannerinfo
+  display: none
+  @include media($small-screen)
+    background-color: $darkest-gray
+    display: block
+    padding: 1em
+  h2
+    text-transform: uppercase
+    color: white
+    font-size: 1.85em
+    text-shadow: 0 2px 3px black
+    text-transform: uppercase
+    text-align: center
+  h2.textshift
+    font-size: 1.2em
+    text-transform: none
+    color: $light-gray
+    font-family: $serif
+    line-height: 1.6em
+    margin-top: 0.5em
+a.logo
+  top: 0.5em
+  left: 3em
+  position: absolute
+  z-index: 1000
+  display: block
+  width: 12em
+  height: auto
+  img
+    width: 100%
+    height: auto
+  &:hover
+  @include media($small-screen)
+    left: 5em
+
+
+nav.service, nav.main
+  @include media($small-screen)
+    display: none
+  li
+    display: inline-block
+  a
+    @include transition (all 0.25s ease-in-out)
+    font-family: $nav-font-family
+    text-transform: uppercase
+    color: $darkest-gray
+    padding: 0.5em
+    display: block
+    &:hover
+      @include transition (all 0.25s ease-in-out)
+
+nav.service
+  text-align: right
+  font-size: 85%
+  margin-bottom: 8em
+  a
+    color: white
+    &:hover
+      color: $accent-color
+
+.mainnavcontainer
+  background-color: white
+
+nav.main
+  @include span-columns(12)
+  position: relative
+  text-align: center
+  font-size: 116%
+  @include media($small-screen)
+    display: none
+  .menu-item
+    display: inline-block
+    position: relative
+  .menu-item:hover > a
+    color: $accent-color
+  .menu-item:hover .sub-menu
+    display: block
+    .sub-menu
+      text-align: center
+      display: none
+  .sub-menu .menu-item:hover > a
+    color: $accent-color
+  .sub-menu .menu-item:hover
+    .sub-menu
+      display: block
+  a
+    display: block
+    &:hover
+      color: white
+  .menu-item .sub-menu
+    @include linear-gradient(white, darken($base-background-color,5))
+    display: none
+    top: 97%
+    left: 50%
+    position: absolute
+    z-index: 1100
+    min-width: 150px
+    +transform(translateX(-50%))
+    -webkit-box-shadow: 0 7px 10px -10px black
+    a
+      display: block
+      font-size: 0.8em
+      padding: 0.5em 1em
+
+  .sub-menu .menu-item
+    text-align: center
+    display: block
+    white-space: nowrap
+  .sub-menu .sub-menu
+    +transform(translateX(0%))
+    position: absolute
+    left: 100%!important
+    top: 0
+
+  .current-menu-item a
+    color: $accent-color
+
+// Targets Last List Element in the Main Navigation and Keeps it within the Wrap
+nav.main .menu-item:last-child
+  .sub-menu .sub-menu
+    left: -85%!important
+
+// Triangle for active menu elements - not really needed
+// nav.main
+//   .current-menu-item:after, .current-page-ancestor:after
+//     content: ""
+//     position: absolute
+//     left: 50%
+//     bottom: -34px
+//     @include triangle(75px, white, down)
+//     +transform(translateX(-50%))
+//     z-index: 999
+//   .sub-menu
+//     .current-menu-item:after
+//       display: none
+
+.modal-container
+  position: fixed
+  max-width: 960px
+  top: 50%
+  left: 50%
+  border-radius: $base-border-radius
+  padding: 2em
+  background-color: $base-background-color
+  z-index: 1003
+  @include transform(translate(-50%, -900%))
+  &:after
+    content: ""
+    position: absolute
+    left: 50%
+    bottom: -34px
+    @include triangle(75px, $base-background-color, down)
+    +transform(translateX(-50%))
+    z-index: 1003
+    -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250,250,250,0.2)))
+.modal
+  z-index: 1002
+  &:before
+    z-index: 1001
+    display: none
+    position: fixed
+    content: ""
+    @include background(linear-gradient(rgba($base-blue-color,0.95), rgba($darkest-gray,0.95)) left no-repeat)
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  a.close
+    position: absolute
+    content: "x"
+    top: -1em
+    right: -1em
+    width: 2em
+    height: 2em
+    line-height: 2em
+    background-color: $primary-color
+    border-radius: 50%
+    color: white
+    text-align: center
+    &:hover
+      background-color: $accent-color
+  &:target:before
+    display: block
+  &:target .modal-container
+    @include transition(translateY, 0.3s ease-in)
+    @include transform(translate(-50%, -50%))
+.fullbacking
+  z-index: 1001
+  display: none
+  position: fixed
+  content: ""
+  @include background(linear-gradient(rgba($darkest-gray,0.95), rgba($base-blue-color,0.95)) left no-repeat)
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+.is-down
+  display: block!important
+.is-open
+  @include transition(translateY, 0.3s ease-in)
+  @include transform(translate(-50%, -50%))
+.latest-event
+  min-width: 100%
+  text-align: right
+  position: absolute
+  bottom: 3em
+  right: 1em
+  padding: 0.5em 0
+  color: white
+  @include media($small-screen)
+    display: none
+  ul.bulletin-board
+    padding: 0 1em
+    text-align: right
+  h5
+    color: white
+  a
+    font-weight: 600
+    color: white
+    &:hover
+      color: $accent-color
+  .bulletin
+    position: absolute
+    right: 0
+
+  .event-icon
+    display: block
+    border-radius: 50%
+    text-align: center
+    position: relative
+    float: right
+    img
+      margin-left: 0.5em
+      width: 0.85em
+      height: auto
+    &:hover
+      img
+        background-color: $accent-color
+#menu-item-211-en, #menu-item-165-en
+  a
+    padding-right: 0!important

@@ -1,0 +1,106 @@
+section.intro
+  height: 100vh
+  @media all and (max-width: $small-break)
+    height: auto
+nav.nav
+  color: white
+  ul
+    padding: 0 1em
+    list-style: none
+  li
+    padding: 0.2em 0
+  a
+    color: white
+    text-decoration: none
+    &:hover
+      color: $secondary-color
+  .sub-menu
+    margin-left: 1em
+.language
+  ul
+    padding: 0!important
+  li
+    display: inline
+    margin-right: 8px
+.intro-key
+  width: 100%
+  height: 85vh
+  background-color: grey
+  background-size: cover!important
+  margin-bottom: 1em
+  @media all and (max-width: $small-break)
+    height: 250px
+.slidedown
+  @include transition(all 0.25s ease)
+  width: 24%
+  height: 85vh
+  position: absolute
+  opacity: 0
+  top: -100%
+  background-color: rgba($primary-color,0.95)
+  z-index: 2
+.active
+  @include transition(all 0.25s ease)
+  top: 0
+  opacity: 1
+.menu-activator
+  position: absolute
+  top: 86vh
+  color: $primary-color
+  font-size: 2em
+  text-decoration: none
+  &:hover
+    color: $secondary-color
+.intro-link
+  float: left
+  font-family: $headline-font
+  color: $primary-color
+  font-size: 1.35em
+  text-decoration: none
+  &:hover
+    color: $secondary-color
+  &:after
+    margin-left: 8px
+    content: ""
+    display: inline-block
+    border-top: 8px solid transparent
+    border-bottom: 8px solid transparent
+    border-left: 8px solid $primary-color
+.logo
+  position: absolute
+  top: 50%
+  width: 220px
+  @include transform(translateY(-100%))
+  img
+    width: 100%
+
+.flex-row
+  @include align-items(stretch)
+  @include display(flex)
+  @include flex-direction(row)
+  @include justify-content(flex-start)
+  @media all and (max-width: $small-break)
+    @include flex-direction(column)
+.flex-col
+  position: relative
+  margin: 0 5px
+  @include flex(1)
+  @media all and (max-width: $small-break)
+    flex-basis: 50%
+.flex-stretch
+  @include transition(all 0.25s ease)
+  &:hover
+    @include transition(all 0.25s ease)
+    @include flex(1.5)
+.intro-subhead
+  color: $primary-color
+  font-size: 1.55em
+  letter-spacing: 0.5px
+  width: 85%
+.theme-block
+  background-color: grey
+  height: 325px
+  margin-bottom: 10px
+  background-size: cover!important
+.hero
+  height: 350px

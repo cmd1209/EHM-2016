@@ -1,0 +1,94 @@
+.theme-wrap{
+  @include outer-container;
+  padding: 0;
+}
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+section.themes{
+  // @include background(linear-gradient($darkest-gray, $base-blue-color, $darkest-gray) left repeat);
+  background-color: $darkest-gray;
+  // background-color: white;
+  @include transition(all 2.0s ease-in-out);
+}
+.grid-items-lines{
+  @include clearfix;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+  $grid-item-columns: 4;
+  $grid-item-medium-columns: 6;
+  $grid-item-big-columns: 8;
+  position: relative;
+  @include box-shadow;
+
+  .grid-item {
+    opacity: 0;
+    @include transition (all 0.2s ease-in-out);
+    background-size: cover!important;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+    min-height: 15em;
+    overflow: hidden;
+    float: left;
+    @include grid-item-columns($grid-item-columns);
+    @include media($small-screen){
+      @include grid-item-columns($grid-item-medium-columns);
+    }
+    &:nth-of-type(2), &:nth-of-type(3) {
+      @include grid-item-columns($grid-item-big-columns);
+      @include media($small-screen){
+        @include grid-item-columns($grid-item-medium-columns);
+      }
+    }
+    &:nth-of-type(5), &:nth-of-type(6){
+      @include grid-item-columns($grid-item-medium-columns);
+    }
+
+    p{
+      font-size: 85%;
+    }
+    &:focus, &:hover{
+      .grid-title{
+        background-color: rgba($accent-color2, 0.8);
+        h5{
+          height: 4em;
+          line-height: 4em;
+          color: white;
+          @include transition (all 0.2s ease-in-out);
+        }
+      }
+    }
+    .grid-title {
+      h5{
+        height: 3em;
+        line-height: 3em;
+        color: white;
+        position: relative;
+        @include transition (all 0.2s ease-in-out);
+      }
+      background-color: rgba($darkest-gray, 0.85);
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      text-align: center;
+    }
+    p {
+      color: white;
+      line-height: 1.5em;
+      margin: auto;
+    }
+  }
+}
+.is-showing {
+  opacity: 1!important;
+}
+
+.grid-item:nth-child(2n){
+  border-left: 2px solid $darkest-gray;
+}
+.grid-item:nth-child(1), .grid-item:nth-child(2), .grid-item:nth-child(3), .grid-item:nth-child(4){
+  border-bottom: 2px solid $darkest-gray;
+}
