@@ -3,19 +3,20 @@ section.intro
   @media all and (max-width: $small-break)
     height: auto
 nav.nav
+  padding-left: 2em
   color: white
   ul
-    padding: 0 1em
+    padding: 0 0.5em
     list-style: none
   li
-    padding: 0.2em 0
+    padding: 3px 0
   a
     color: white
     text-decoration: none
     &:hover
       color: $secondary-color
   .sub-menu
-    margin-left: 1em
+    margin-left: 3px
 .language
   ul
     padding: 0!important
@@ -29,7 +30,7 @@ nav.nav
   background-size: cover!important
   margin-bottom: 1em
   @media all and (max-width: $small-break)
-    height: 250px
+    height: 40vh
 .slidedown
   @include transition(all 0.25s ease)
   width: 24%
@@ -39,16 +40,24 @@ nav.nav
   top: -100%
   background-color: rgba($primary-color,0.95)
   z-index: 2
+  @media all and (max-width: $small-break)
+    width: 100%
+    height: 100vh
 .active
   @include transition(all 0.25s ease)
   top: 0
   opacity: 1
+.menuarea
+  position: relative
 .menu-activator
+  z-index: 5
   position: absolute
-  top: 86vh
+  bottom: 0
   color: $primary-color
   font-size: 2em
   text-decoration: none
+  padding: 8px
+  background-color: white
   &:hover
     color: $secondary-color
 .intro-link
@@ -66,6 +75,7 @@ nav.nav
     border-top: 8px solid transparent
     border-bottom: 8px solid transparent
     border-left: 8px solid $primary-color
+
 .logo
   position: absolute
   top: 50%
@@ -73,25 +83,25 @@ nav.nav
   @include transform(translateY(-100%))
   img
     width: 100%
-
 .flex-row
-  @include align-items(stretch)
-  @include display(flex)
-  @include flex-direction(row)
-  @include justify-content(flex-start)
-  @media all and (max-width: $small-break)
-    @include flex-direction(column)
+  width: 100%
+  display: flex
+  flex-flow: row wrap
 .flex-col
-  position: relative
-  margin: 0 5px
-  @include flex(1)
+  box-sizing: border-box
+  flex: 1
   @media all and (max-width: $small-break)
-    flex-basis: 50%
+    flex-basis: 40%
 .flex-stretch
+  margin: 0 5px
   @include transition(all 0.25s ease)
+  @media all and (max-width: $small-break)
+    margin: 0 0 20px 0
   &:hover
     @include transition(all 0.25s ease)
-    @include flex(1.5)
+    flex-basis: 18%
+    @media all and (max-width: $small-break)
+      flex-basis: 40%
 .intro-subhead
   color: $primary-color
   font-size: 1.55em

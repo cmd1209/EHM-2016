@@ -5,7 +5,7 @@
 		</nav>
 
 	<div class="flex-row">
-		<div class="flex-col">
+		<div class="flex-col menuarea">
 			<nav class="nav language">
 				<?php service_nav(); ?>
 			</nav>
