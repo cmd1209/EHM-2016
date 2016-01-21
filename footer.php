@@ -1,18 +1,48 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
+				<div class="row">
+					<div class="col col--3-of-12 col--m-1-of-2 col--s-1-of-2">
 
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
+					</div>
+					<div class="col col--3-of-12 col--m-1-of-2 col--s-1-of-2">
+						<div class="footer-logo sponsor-logo">
+							<a href="<?php echo home_url(); ?>">
+								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+								<img src="<?php echo get_template_directory_uri(); ?>/img/hansestadt.svg" alt="Logo" class="hansestadt-img">
+							</a>
+						</div>
+					</div>
+					<div class="col col--3-of-12 col--m-1-of-2 col--s-1-of-2">
+						<div class="footer-logo sponsor-logo">
+							<p class="footer-caption">Gefördert durch die:</p>
+							<img class="footer-logo" src="<?php $url = content_url(); echo $url; ?>/uploads/2015/01/possehl.png" alt="">
+						</div>
+					</div>
+					<div class="col col--3-of-12 col--m-1-of-2 col--s-1-of-2">
+						<div class="footer-logo sponsor-logo">
+							<p class="footer-caption">Gefördert durch die Europäische Union, Europäischer Fonds für regionale Entwicklung (EFRE),den Bund und das Land Schleswig-Holstein</p>
+							<img class="footer-logo" src="<?php $url = content_url(); echo $url; ?>/uploads/2015/01/zukunftsprogramm.png" alt="">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col col--12-of-12">
+						<p class="copyright">
+							&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.
+						</p>
+					</div>
+
+				</div>
+
+
+
 
 			</footer>
-			<!-- /footer -->
+
 
 		</div>
-		<!-- /wrapper -->
+
 
 		<?php wp_footer(); ?>
 

@@ -1,33 +1,25 @@
-//navigation elements
-footer.footer
-  background-image: url(../img/h-footer.svg)
-  background-repeat: no-repeat
-  background-size: cover
-  background-position: center center
-  position: relative
-  padding-bottom: 2em
-  .fix
-    padding: 1em 0
-    @include media ($small-screen)
-      @include span-columns(3)
-      padding: 2em
-  @include background(linear-gradient($base-blue-color, black) left repeat)
-  min-height: 8em
-  .lang-item
-    float: left
-    padding-right: 1em
-    @include media($small-screen)
-      float: none
-      padding-left: 0
-  .menu-item
-    text-align: left
-  .gefoerdert
-    font-size: 70%
-    text-align: right
-  .sponsor-logo
-    padding-left: 2em
-  .footer-logo
-    width: 12em
-    position: relative
-    text-align: center
-    margin: 0 auto 2em auto
+footer
+  margin: 5em 0 0 0
+
+.footer-logo
+  img
+    width: 100%
+    @media all and (max-width: $small-break)
+      width: 100%
+.main-footer-logo
+  margin-left: 8px
+  img
+    width: 75%
+    @media all and (max-width: $small-break)
+      width: 100%
+.sponsor-logo
+  img
+    width: 70%
+    @media all and (max-width: $small-break)
+      width: 100%
+.footer-caption
+  font-size: 0.85em
+  color: $primary-color
+.copyright
+  color: $primary-color
+  text-align: center

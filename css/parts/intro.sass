@@ -3,7 +3,7 @@ section.intro
   @media all and (max-width: $small-break)
     height: auto
 nav.nav
-  padding-left: 2em
+  padding-left: 8px
   color: white
   ul
     padding: 0 0.5em
@@ -19,7 +19,7 @@ nav.nav
     margin-left: 3px
 .language
   ul
-    padding: 0!important
+    padding-left: 0!important
   li
     display: inline
     margin-right: 8px
@@ -29,11 +29,22 @@ nav.nav
   background-color: grey
   background-size: cover!important
   margin-bottom: 1em
+  @include transition(all 0.25s ease)
+  -webkit-filter: sepia(0.45)
+  filter: sepia(0.45)
+  &:hover
+    @include transition(all 0.5s ease)
+    -webkit-filter: sepia(0)
+    filter: sepia(0)
   @media all and (max-width: $small-break)
     height: 40vh
+.full-area-link
+  display: block
+  width: 100%
+  height: 100%
 .slidedown
   @include transition(all 0.25s ease)
-  width: 24%
+  width: 23.5%
   height: 85vh
   position: absolute
   opacity: 0
@@ -43,6 +54,7 @@ nav.nav
   @media all and (max-width: $small-break)
     width: 100%
     height: 100vh
+    padding-left: 42px!important
 .active
   @include transition(all 0.25s ease)
   top: 0
@@ -79,8 +91,9 @@ nav.nav
 .logo
   position: absolute
   top: 50%
-  width: 220px
-  @include transform(translateY(-100%))
+  left: 8px
+  width: 75%
+  @include transform(translateY(-50%))
   img
     width: 100%
 .flex-row
@@ -95,13 +108,18 @@ nav.nav
 .flex-stretch
   margin: 0 5px
   @include transition(all 0.25s ease)
-  @media all and (max-width: $small-break)
-    margin: 0 0 20px 0
   &:hover
     @include transition(all 0.25s ease)
     flex-basis: 18%
     @media all and (max-width: $small-break)
       flex-basis: 40%
+.flex-col
+  @media all and (max-width: $small-break)
+    margin: 0 0 20px 0
+    &:nth-of-type(1), &:nth-of-type(3)
+      margin: 0 5px 20px 0
+    &:nth-of-type(2), &:nth-of-type(4)
+      margin: 0 0 20px 5px
 .intro-subhead
   color: $primary-color
   font-size: 1.55em
@@ -113,4 +131,8 @@ nav.nav
   margin-bottom: 10px
   background-size: cover!important
 .hero
-  height: 350px
+  height: $keyvisual-height
+  background-size: cover!important
+.menuarea-page
+  position: relative
+  height: $keyvisual-height

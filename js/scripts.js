@@ -8,6 +8,13 @@
 		$(".menu-activator").click(function() {
   		$('.slidedown').toggleClass("active")
 		});
+		$(".owl-carousel").owlCarousel({
+			autoPlay : 10000,
+			navigation: false,
+			paginationSpeed : 800,
+			goToFirstSpeed : 3500,
+			singleItem : true,
+		});
 
 	});
 

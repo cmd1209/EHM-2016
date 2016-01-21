@@ -20,16 +20,22 @@
 		</div>
 
 		<div class="flex-col flex-stretch">
-			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-3019.jpg)no-repeat center center;"></div>
-			<a href="#" class="intro-link">Museum</a>
+			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-3019.jpg)no-repeat center center;">
+				<a href="<?php echo get_page_link(589); ?>" class="full-area-link"></a>
+			</div>
+			<a href="<?php echo get_page_link(589); ?>" class="intro-link">Museum</a>
 		</div>
 		<div class="flex-col flex-stretch">
-			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4582.jpg)no-repeat center center;"></div>
-			<a href="#" class="intro-link">Ihr Besuch</a>
+			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4582.jpg)no-repeat center center;">
+				<a href="<?php echo get_page_link(297); ?>" class="full-area-link"></a>
+			</div>
+			<a href="<?php echo get_page_link(297); ?>" class="intro-link">Ihr Besuch</a>
 		</div>
 		<div class="flex-col flex-stretch">
-			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4949_1.jpg)no-repeat center center;"></div>
-			<a href="#" class="intro-link">Veranstaltungen & <br>Restaurant</a>
+			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4949_1.jpg)no-repeat center center;">
+				<a href="<?php echo get_page_link(612); ?>" class="full-area-link"></a>
+			</div>
+			<a href="<?php echo get_page_link(612); ?>" class="intro-link">Veranstaltungen & <br>Restaurant</a>
 		</div>
 	</div> <!--end row -->
 </section>
