@@ -26,8 +26,8 @@
 
 		<!-- wrapper -->
 		<div class="wrapper">
-
-			<!-- header -->
+			<nav class="nav slidedown" role="navigation">
+				<?php html5blank_nav(); ?>
+			</nav>
 			<header class="header clear" role="banner">
 			</header>
-			<!-- /header -->

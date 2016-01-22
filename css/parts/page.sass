@@ -3,22 +3,35 @@
   font-size: 500%
   font-weight: lighter
   margin: 0.4em 0
+  @media all and (max-width: $small-break)
+    text-align: center
 .page-excerpt
   width: 85%
   font-size: 180%
   line-height: 140%
   font-weight: lighter
+  @media all and (max-width: $small-break)
+    width: 100%
+    font-size: 150%
+    line-height: 125%
 .sub-page-menu
   width: 80%
   float: right
   padding: 2em 0 1em 0
+  @media all and (max-width: $small-break)
+    width: 100%
+    padding: 2em 0
+    float: left
   li
     text-align: right
     float: right
     display: inline
-    font-size: 1.7em
+    font-size: 1.25em
     font-family: $headline-font
     margin-left: 0.75em
+    @media all and (max-width: $small-break)
+      float: left
+      font-size: 1.5em
     &:after
       margin: 0 8px 0 -1px
       content: ""

@@ -5,7 +5,8 @@ $sans: 'pfcentrosanspro-light', san-serif
 $headline-font: 'PFCentroSerifPro-Regular', serif
 
 $small-break: 740px
-$keyvisual-height: 500px
+$keyvisual-height: 650px
+$keyvisual-mobile-height: 450px
 
 @mixin transition($args...)
   -webkit-transition: $args
@@ -31,6 +32,8 @@ h1, h2, h3, h4, h5, h6
   font-weight: lighter
   color: $primary-color
 .wrapper
-  position: relative
   max-width: 1280px
   margin: 0 auto
+  position: relative
+main
+  padding: 0 8px

@@ -1,9 +1,4 @@
 <section class="intro">
-
-		<nav class="nav slidedown" role="navigation">
-			<?php html5blank_nav(); ?>
-		</nav>
-
 	<div class="flex-row">
 		<div class="flex-col menuarea">
 			<nav class="nav language">

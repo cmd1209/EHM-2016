@@ -1,8 +1,4 @@
 <?php get_header(); ?>
-<nav class="nav slidedown" role="navigation">
-	<?php html5blank_nav(); ?>
-</nav>
-
 			<main role="main">
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 				<section>

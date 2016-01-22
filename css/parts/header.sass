@@ -1,0 +1,53 @@
+.slidedown
+  @include transition(all 0.25s ease)
+  width: 24.2%
+  height: 100%
+  position: absolute
+  opacity: 0
+  top: -100%
+  padding: 0 16px 0 0
+  background-color: rgba($primary-color,0.95)
+  z-index: 2
+  @media all and (max-width: $small-break)
+    width: 50%
+    height: 100vh
+nav.nav
+  margin: 0
+  color: white
+  ul
+    margin: 0
+    list-style: none
+  li
+    padding: 3px 0
+    text-align: left
+  a
+    color: white
+    text-decoration: none
+    &:hover
+      color: $secondary-color
+  .menu-item-has-children
+    margin: 8px 0
+    padding: 8px 0
+  .sub-menu
+    padding-left: 16px
+
+
+
+.active
+  @include transition(all 0.25s ease)
+  top: 0
+  opacity: 1
+.menuarea
+  position: relative
+.menu-activator
+  z-index: 5
+  position: absolute
+  bottom: 0
+  color: $primary-color
+  font-size: 2em
+  text-decoration: none
+  padding: 8px
+  margin-left: -8px
+  background-color: white
+  &:hover
+    color: $secondary-color
