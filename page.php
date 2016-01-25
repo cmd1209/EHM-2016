@@ -17,42 +17,39 @@
 							<a href="javascript:void(0);" class="menu-activator">&#9776;</a>
 						</div>
 						<div class="col col--9-of-12">
-							<div class="owl-carousel">
-								<?php $archkey = wp_get_attachment_url( get_post_thumbnail_id(252	) ); ?>
-								<?php $historykey = wp_get_attachment_url( get_post_thumbnail_id(134	) ); ?>
-								<?php $forschungkey = wp_get_attachment_url( get_post_thumbnail_id(454	) ); ?>
-								<?php $ausstellungkey = wp_get_attachment_url( get_post_thumbnail_id(98	) ); ?>
-									<div class="page-key" style="background:url(<?php echo $archkey; ?>)center center;">
-									</div>
-									<div class="page-key" style="background:url(<?php echo $historykey; ?>)center center;">
-									</div>
-									<div class="page-key" style="background:url(<?php echo $forschungkey; ?>)center center;">
-									</div>
-									<div class="page-key" style="background:url(<?php echo $ausstellungkey; ?>)center center;">
-									</div>
-							</div>
+							  <?php if (has_post_thumbnail() ): ?>
+							      <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+							      <div class="hero" style="background:url(<?php echo $featuredImage; ?>)center center;">
+							      </div>
+							  <?php else: ?>
+							     <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(252) ); ?>
+							      <div class="hero" style="background:url(<?php echo $featuredImage; ?>)center center;">
+							      </div>
+							 <?php endif ?>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col col--4-of-12">
-							<h1 class="page-title"><?php the_title(); ?></h1>
-						</div>
-						<div class="col col--8-of-12">
-							<nav class="sub-page-menu">
-								<?php global $id; wp_list_pages("title_li=&child_of=$id&show_date=modified&date_format=$date_format&depth=1"); ?>
-							</nav>
-						</div>
-					</div>
-					<div class="row">
+					<div class="row top-row">
 						<div class="col col--9-of-12 page-content">
-							<h2 class="page-excerpt"><?php the_excerpt(); ?></h2>
+							<h1 class="page-title"><?php the_title(); ?></h1>
+							<nav class="sub-page-menu">
+								<?php
+  if($post->post_parent)
+  $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+  else
+  $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+  if ($children) {
+$parent_title = get_the_title($post->post_parent);?>
+<li><a href="<?php echo get_permalink($post->post_parent) ?>"><?php echo $parent_title;?></a></li>
+  <?php echo $children; ?>
+  <?php } ?>
+							</nav>
+								<h2 class="page-excerpt"><?php the_excerpt(); ?></h2>
 							<?php the_content(); ?>
-						</div>
-
-					<?php endwhile; ?>
+						<?php endwhile; ?>
 					<?php endif; ?>
 					<?php rewind_posts();?>
 					<?php wp_reset_query();?>
+						</div>
 						<div class="col col--3-of-12">
 							<?php include ("parts/news.php"); ?>
 						</div>
