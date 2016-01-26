@@ -43,7 +43,10 @@ $parent_title = get_the_title($post->post_parent);?>
   <?php echo $children; ?>
   <?php } ?>
 							</nav>
-								<h2 class="page-excerpt"><?php the_excerpt(); ?></h2>
+									<?php if (has_excerpt() ):?>
+										<h2 class="page-excerpt"> <?php the_excerpt(); ?> </h2>
+									<?php else: ?> <!-- don't display anything because it seems to grab the first paragraph -->
+									<?php endif ?>
 							<?php the_content(); ?>
 						<?php endwhile; ?>
 					<?php endif; ?>

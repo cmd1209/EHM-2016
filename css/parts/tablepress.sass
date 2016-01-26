@@ -1,130 +1,38 @@
-.tablepress
-  tbody td
-    vertical-align: middle!important
-table.price
-  border: none
-  box-shadow: 0 20px 14px -20px $darkest-gray
-  table-layout: auto
-  tr td:nth-child(1), tr td:nth-child(2), tr td:nth-child(3)
-    font-size: 1.25em
-.tablepress.price
+table.tablepress
+  color: white
+  font-size: 24px
+  border: 0.5em solid $secondary-color!important
+  h2
+    color: white
+    margin: 0
   i
-    font-size: 0.65em!important
-  th
-    background-color: $accent-color2
-    color: white
-  th.column-1
-    border-radius: $base-border-radius*2 0 0 0
-  th.column-2
-    // border-top: 2em solid lighten($accent-color2, 5)
-    // border-bottom: 1em solid lighten($accent-color2, 5)
-    background-color: $accent-color2
-  th.column-3
-    border-radius: 0 $base-border-radius*2 0 0
-  th, td
-    text-align: center
-    border-top: none
-    border-bottom: none
-  tbody td.column-2
-    width: 45%
-  tr:nth-child(2n-1)
-    background-color: lighten($base-background-color  , 10)
-    color: $darkest-gray
-    td.column-2
-      background-color: lighten($base-background-color  , 10)
-      // border-top: 1em solid $darkest-gray
-      // border-bottom: 1em solid $darkest-gray
-  tr:nth-child(2n)
-    background-color: lighten($base-background-color  , 4)
-    color: $darkest-gray
-    td.column-2
-      background-color: lighten($base-background-color  , 4)
-      // border-top: 1em solid white
-      // border-bottom: 1em solid white
-  td.column-1, td.column-3
-    font-size: 2.5em
-    @include media($small-screen)
-      font-size: 1.75em
-    span
-      font-size: 65%
-      vertical-align: top
-  tr:last-child
-    td.column-1
-      border-radius: 0 0 0 $base-border-radius*2
-    td.column-3
-      border-radius: 0 0 $base-border-radius*2 0
-
-.tablepress.kombi
-  @extend table.price
-  @extend .tablepress.price
-  td.column-1, td.column-3
-    font-size: 1.25em
-  td.column-2
-    font-size: 2.5em!important
-    @include media($small-screen)
-      font-size: 1.75em!important
-    span
-      font-size: 65%!important
-      vertical-align: top
-
-table.price2
-  box-shadow: 0 20px 14px -20px $darkest-gray
-.tablepress.price2
-  span
-    font-size: 75%
-  th, td
-    border-top: none
-    border-bottom: none
-  .column-1
-    background-color: $accent-color2
-    color: white
-    padding-left: 1em
-  .column-2, .column-3, .column-4
-    text-align: right
-    padding-right: 1em
-    background-color: white
-    color: $darkest-gray
-  th.column-1, th.column-2, th.column-3, th.column-4
-    background-color: $accent-color2
-    color: white
-  td.column-2, td.column-3, td.column-4
-    font-size: 150%
-  tr:nth-child(2n)
+    font-size: 16px
+  border: none
+  table-layout: auto
+  thead
+    th
+      background-color: $secondary-color
+      border: none
+  tbody
+    background-color: $secondary-color
+    tr
+      border-bottom: 8px solid $secondary-color
+      .column-1, .column-2
+        background-color: darken($secondary-color,7)
+      .column-3
+        background-color: darken($secondary-color,5)
+        border-left: 8px solid $secondary-color
     td
-      background-color: darken(white,5)
-    td.column-1
-      background-color: darken($accent-color2,5)
-  th.column-1
-    border-radius: $base-border-radius*2 0 0 0
-  th.column-4
-    border-radius: 0 $base-border-radius*2 0 0
-  tr:last-child
-    td.column-1
-      border-radius: 0 0 0 $base-border-radius*2
-    td.column-4
-      border-radius: 0 0 $base-border-radius*2 0
-
-table.guide
-  @extend .tablepress.price2
-  th, td
-    border-top: none!important
-    border-bottom: none!important
-  th.column-3
-    border-radius: 0 $base-border-radius*2 0 0
-  tr:last-child
-    td.column-1
-      border-radius: 0 0 0 $base-border-radius*2
-    td.column-3
-      border-radius: 0 0 $base-border-radius*2 0
-table.year
-  @extend .tablepress.price2
-  th, td
-    border-top: none!important
-    border-bottom: none!important
-  th.column-2
-    border-radius: 0 $base-border-radius*2 0 0
-  tr:last-child
-    td.column-1
-      border-radius: 0 0 0 $base-border-radius*2
-    td.column-2
-      border-radius: 0 0 $base-border-radius*2 0
+      border: none
+  .column-1
+    width: 50%
+    padding: 0.5em
+  .column-2
+    padding: 0.5em 2em 0.5em 0.5em
+    width: 25%
+    text-align: right
+    vertical-align: middle
+  .column-3
+    text-align: center
+    vertical-align: middle
+    width: 25%
