@@ -4,7 +4,7 @@ $serif: 'PFCentroSerifPro-Regular', serif
 $sans: 'pfcentrosanspro-light', san-serif
 $headline-font: 'PFCentroSerifPro-Regular', serif
 
-$small-break: 740px
+$small-break: 840px
 $keyvisual-height: 650px
 $keyvisual-mobile-height: 450px
 
@@ -24,7 +24,6 @@ $keyvisual-mobile-height: 450px
 @import 'parts/tablepress'
 @import 'parts/footer'
 
-
 body
   background-color: white
   font-family: $sans
@@ -36,6 +35,8 @@ h1, h2, h3, h4, h5, h6
   max-width: 1280px
   margin: 0 auto
   position: relative
+  @media all and (max-width: $small-break)
+    padding: 0 1em
 main
   padding: 0 8px
 p
