@@ -11,7 +11,7 @@
 					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
 				</a>
 			</div>
-			<a href="javascript:void(0);" class="menu-activator">&#9776;</a>
+			<a href="javascript:void(0);" class="menu-activator unstuck">&#9776;</a>
 		</div>
 
 		<div class="flex-col flex-stretch">

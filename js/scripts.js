@@ -17,12 +17,11 @@
 		});
 		$(window).resize(function(){
 				var windowHeight = $(window).height();
-				var ninetypercent = 600;
 				var slidedown = $('.slidedown');
 				var activator = $('.menu-activator');
     $(document).scroll(function(){
       var y = $(this).scrollTop();
-      if( y > ninetypercent) {
+      if( y > 600) {
         activator.removeClass('unstuck');
         activator.addClass('stuck');
         } else {

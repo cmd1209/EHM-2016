@@ -1,7 +1,8 @@
 table.tablepress
+  box-shadow: 0 15px 25px -10px black
   color: white
   font-size: 24px
-  border: 0.5em solid $secondary-color!important
+  border: 0.5em solid $primary-color!important
   h2
     color: white
     margin: 0
@@ -11,17 +12,17 @@ table.tablepress
   table-layout: auto
   thead
     th
-      background-color: $secondary-color
+      background-color: $primary-color
       border: none
   tbody
-    background-color: $secondary-color
+    background-color: $primary-color
     tr
-      border-bottom: 8px solid $secondary-color
+      border-bottom: 8px solid $primary-color
       .column-1, .column-2
-        background-color: darken($secondary-color,7)
+        background-color: darken($primary-color,7)
       .column-3
-        background-color: darken($secondary-color,5)
-        border-left: 8px solid $secondary-color
+        background-color: darken($primary-color,5)
+        border-left: 8px solid $primary-color
     td
       border: none
   .column-1
@@ -36,3 +37,9 @@ table.tablepress
     text-align: center
     vertical-align: middle
     width: 25%
+.opening, .double
+  td
+    padding: 0.5em!important
+    width: auto!important
+h2.tablepress-table-name
+  font-size: 20px!important

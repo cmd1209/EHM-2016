@@ -22,9 +22,14 @@
   text-shadow: 2px 2px 3px black
 .news-title
   font-size: 1.4em
+  @media all and (max-width: $medium-break)
+    font-size: 1.2em
+    font-weight: bold
 .news-date
   text-transform: uppercase
   font-size: 2.25em
+  @media all and (max-width: $medium-break)
+    font-size: 1.6em
   letter-spacing: 2px
 .news-link
   color: $link-color

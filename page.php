@@ -19,11 +19,11 @@
 						<div class="col col--9-of-12">
 							  <?php if (has_post_thumbnail() ): ?>
 							      <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-							      <div class="hero" style="background:url(<?php echo $featuredImage; ?>)center center;">
+							      <div class="hero" style="background:url(<?php echo $featuredImage; ?>)bottom center;">
 							      </div>
 							  <?php else: ?>
 							     <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(252) ); ?>
-							      <div class="hero" style="background:url(<?php echo $featuredImage; ?>)center center;">
+							      <div class="hero" style="background:url(<?php echo $featuredImage; ?>)bottom center;">
 							      </div>
 							 <?php endif ?>
 						</div>
