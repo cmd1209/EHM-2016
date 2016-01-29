@@ -1,21 +1,83 @@
+.wrapper
+  max-width: 1280px
+  margin: 0 auto
+  position: relative
+  overflow-x: hidden
+  @media all and (max-width: $large-break)
+    padding: 0 4px
+main
+  padding: 0 4px
+
+.stage
+  width: 100%
+  position: relative
+  margin-left: 0
+  @include transition(all 0.25s ease)
+
+.service-container
+  position: fixed
+
+.language
+  ul
+    padding-left: 0!important
+  li
+    display: inline
+.logo
+  position: fixed
+  top: 50%
+  width: 200px
+  @include transform(translateY(-50%))
+  img
+    width: 100%
+
+.logo-nav
+  width: 200px
+  img
+    width: 100%
+
+// Sliding Column Header Element
+
+.sliding-header
+  position: relative
+  height: 95vh
+  padding-right: 10px
+  overflow: hidden
+
 .slidedown
   @include transition(all 0.25s ease)
-  width: 24.2%
+  padding: 1em
+  position: fixed
   height: 100%
-  position: absolute
   opacity: 0
   top: -100%
-  padding: 0 0 0 14px
   background-color: white
   z-index: 2
-  @media all and (max-width: $small-break)
-    width: 50%
-    height: 100vh
+  box-shadow: 10px 0 25px -15px grey
+  .lang-item
+    display: inline-block
+
+
+// Sliding Menu Activator
+
+.menu-activator
+  position: fixed
+  bottom: 20px
+  padding: 0 8px
+  z-index: 5
+  color: $primary-color
+  font-size: 2em
+  text-decoration: none
+  background-color: rgba(white,0.85)
+  &:hover
+    color: $secondary-color
+
+
+// Navigation Elements
+
 nav.nav
   margin: 0
   color: $primary-color
   ul
-    padding-left: 32px
     margin: 0
     list-style: none
   li
@@ -32,25 +94,13 @@ nav.nav
     padding: 8px 0
   .sub-menu
     padding-left: 12px
+
+// Jquery Classes
+
 .active
   @include transition(all 0.25s ease)
-  top: 0
   opacity: 1
-.menuarea
-  position: relative
-.menu-activator
-  padding: 0 8px
-  z-index: 5
-  color: $primary-color
-  font-size: 2em
-  text-decoration: none
-  margin-left: -8px
-  background-color: rgba(white,0.85)
-  &:hover
-    color: $secondary-color
-.unstuck
-  position: absolute
-  bottom: 0
-.stuck
-  position: fixed
   top: 0
+.shoved
+  @include transition(all 0.25s ease)
+  margin-left: 250px

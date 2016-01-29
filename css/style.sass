@@ -4,8 +4,9 @@ $serif: 'PFCentroSerifPro-Regular', serif
 $sans: 'pfcentrosanspro-light', san-serif
 $headline-font: 'PFCentroSerifPro-Regular', serif
 
-$small-break: 840px
-$medium-break: 1024px
+$small-break: $toast-breakpoint-small
+$medium-break: $toast-breakpoint-medium
+$large-break: 1280px
 $keyvisual-height: 400px
 $keyvisual-mobile-height: 300px
 
@@ -32,13 +33,5 @@ h1, h2, h3, h4, h5, h6
   font-family: $headline-font
   font-weight: lighter
   color: $primary-color
-.wrapper
-  max-width: 1280px
-  margin: 0 auto
-  position: relative
-  @media all and (max-width: $small-break)
-    padding: 0 1em
-main
-  padding: 0 8px
 p
   line-height: 1.45em

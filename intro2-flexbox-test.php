@@ -1,19 +1,4 @@
-<section class="intro">
-	<div class="row">
-		<div class="col col--2-of-12 menu-placeholder">
-			<nav class="nav language">
-				<?php service_nav(); ?>
-			</nav>
-			<?php get_template_part('searchform'); ?>
-			<div class="logo">
-				<a href="<?php echo home_url(); ?>">
-					<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-				</a>
-			</div>
-			<a href="javascript:void(0);" class="menu-activator unstuck">&#9776;</a>
-		</div>
-		<div class="col col--10-of-12">
+		<div class="col col--10-of-12 col--m-2-of-3 col--s-1-of-1 col--no-gutter">
 			<div class="flex-container">
 				<div class="flex-child">
 					<?php $museumImage = wp_get_attachment_url( get_post_thumbnail_id(589) ); ?>
