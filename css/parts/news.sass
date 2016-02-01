@@ -6,7 +6,7 @@
   -o-font-smoothing: antialiased
   background-color: $primary-color
   color: white
-  padding: 8px
+  padding: 10px
   h1, h2, h3, h4, h5, h6
     font-family: $sans
     color: white
@@ -25,6 +25,16 @@
   @media all and (max-width: $large-break)
     font-size: 1.2em
     font-weight: bold
+.news-thumbnail
+  width: 108px
+  height: 108px
+  display: block
+  background-size: cover
+  margin: 9px 8px 4px 0
+  float: left
+  @media all and (max-width: $medium-break)
+    width: 216px
+    height: 128px
 .news-date
   text-transform: uppercase
   font-size: 2.25em

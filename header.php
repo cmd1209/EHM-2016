@@ -36,7 +36,7 @@
 			</header>
 			<section class="">
 				<div class="row">
-					<div class="col col--2-of-12 col--m-1-of-3 col--s-1-of-1 col--no-gutter">
+					<div class="col col--2-of-12 col--m-1-of-3">
 						<div class="sliding-header">
 							<div class="service-container">
 								<nav class="nav language">

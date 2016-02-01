@@ -1,16 +1,9 @@
 <?php get_header(); ?>
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-	<div class="col col--10-of-12 col--m-2-of-3 col--s-1-of-1 col--no-gutter">
-		<?php if (has_post_thumbnail() ): ?>
-			<?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-			<div class="hero" style="background:url(<?php echo $featuredImage; ?>)center center;">
-			</div>
-		<?php else: ?>
-			<?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(252) ); ?>
-			<div class="hero" style="background:url(<?php echo $featuredImage; ?>)center center;">
-			</div>
-		<?php endif ?>
-	<div class="col col--9-of-12 col--m-1-of-1 page-content">
+	<div class="col col--10-of-12 col--m-2-of-3 col--s-1-of-1">
+		<?php include ("parts/page-divisions.php") ?>
+		<div class="row">
+	<div class="col col--8-of-12 col--m-1-of-1 page-content">
 		<h1 class="page-title"><?php the_title(); ?></h1>
 		<nav class="sub-page-menu">
 			<?php
@@ -34,9 +27,12 @@
 	<?php rewind_posts();?>
 	<?php wp_reset_query();?>
 </div>
-<div class="col col--3-of-12 col--m-1-of-1">
+<div class="col col--4-of-12 col--m-1-of-1">
 	<?php include ("parts/news.php"); ?>
 </div>
+
+
+		</div>
 </section>
 
 <br class="clear">

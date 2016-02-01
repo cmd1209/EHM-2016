@@ -16,6 +16,8 @@ main
 
 .service-container
   position: fixed
+  @media all and (max-width: $medium-break)
+    position: relative
 
 .language
   ul
@@ -25,8 +27,10 @@ main
 .logo
   position: fixed
   top: 50%
-  width: 200px
+  width: 185px
   @include transform(translateY(-50%))
+  @media all and (max-width: $small-break)
+    position: absolute
   img
     width: 100%
 
@@ -42,6 +46,9 @@ main
   height: 95vh
   padding-right: 10px
   overflow: hidden
+  @media all and (max-width: $medium-break)
+    height: 350px
+    width: 100%
 
 .slidedown
   @include transition(all 0.25s ease)
@@ -55,7 +62,6 @@ main
   box-shadow: 10px 0 25px -15px grey
   .lang-item
     display: inline-block
-
 
 // Sliding Menu Activator
 
@@ -87,8 +93,11 @@ nav.nav
     font-weight: bold
     color: $primary-color
     text-decoration: none
+    display: inline-block
+    padding: 0 5px
     &:hover
-      color: $secondary-color
+      background-color: $secondary-color
+      color: white
   .menu-item-has-children
     margin: 8px 0
     padding: 8px 0
