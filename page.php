@@ -34,10 +34,22 @@
 					<?php else: ?> <!-- don't display anything because it seems to grab the first paragraph -->
 					<?php endif ?>
 					<?php the_content(); ?>
+					<div class="row">
+						<div class="col col--6-of-12">
+							<div class="block red">
+								red
+							</div>
+						</div>
+						<div class="col col--6-of-12">
+							<div class="block red">
+								red
+							</div>
+						</div>
+					</div>
 				</div>
 		</div>
 		<div class="col col--4-of-12">
-			<?php include("parts/themes.php"); ?>
+			<?php include("parts/news.php"); ?>
 		</div>
 	</section>
 <?php endwhile; ?>
