@@ -1,36 +1,16 @@
-<div class="row">
-  <div class="col col--7-of-12">
-    <div class="theme-block" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4569.jpg) no-repeat center center;" >
-      <a href="#">Let's See</a>
-    </div>
-  </div>
-  <div class="col col--5-of-12">
-    <div class="theme-block" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4849_1.jpg) no-repeat center center;" >
-      <a href="#">What this does</a>
-    </div>
-  </div>
+<?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(252) ); ?>
+<div class="block" style="background:url(<?php echo $featuredImage; ?>)center center;">
+  <a href="<?php echo get_page_link(589); ?>" class="full-area-link"><h3>Link</h3></a>
 </div>
-<div class="row">
-  <div class="col col--5-of-12">
-    <div class="theme-block" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4797.jpg) no-repeat center center;" >
-      <a href="#">Let's See</a>
-    </div>
-  </div>
-  <div class="col col--7-of-12">
-    <div class="theme-block" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2015/04/freiraum.jpg) no-repeat center center;" >
-      <a href="#">What this does</a>
-    </div>
-  </div>
+<?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(98) ); ?>
+<div class="block" style="background:url(<?php echo $featuredImage; ?>)center center;">
+  <a href="<?php echo get_page_link(589); ?>" class="full-area-link"><h3>Link</h3></a>
 </div>
-<div class="row">
-  <div class="col col--1-of-2">
-    <div class="theme-block" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-3032.jpg) no-repeat center center;" >
-      <a href="#">Let's See</a>
-    </div>
-  </div>
-  <div class="col col--1-of-2">
-    <div class="theme-block" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4757.jpg) no-repeat center center;" >
-      <a href="#">What this does</a>
-    </div>
-  </div>
+<?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(134) ); ?>
+<div class="block" style="background:url(<?php echo $featuredImage; ?>)center center;">
+  <a href="<?php echo get_page_link(589); ?>" class="full-area-link"><h3>Link</h3></a>
+</div>
+<?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(454) ); ?>
+<div class="block" style="background:url(<?php echo $featuredImage; ?>)center center;">
+  <a href="<?php echo get_page_link(589); ?>" class="full-area-link"><h3>Link</h3></a>
 </div>

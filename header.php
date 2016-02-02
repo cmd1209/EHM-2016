@@ -32,9 +32,6 @@
 		</div>
 		<div class="wrapper">
 			<div class="stage">  <!-- begin stage,-->
-			<header class="header clear" role="banner">
-			</header>
-			<section class="">
 				<div class="row">
 					<div class="col col--2-of-12 col--m-1-of-3">
 						<div class="sliding-header">
@@ -43,6 +40,7 @@
 									<?php service_nav(); ?>
 								</nav>
 								<?php get_template_part('searchform'); ?>
+								<?php get_calendar(); ?>
 							</div>
 						<div class="logo">
 							<a href="<?php echo home_url(); ?>">
