@@ -1,8 +1,26 @@
+@-webkit-keyframes MOVE-BG
+  0%
+    background-position: 0% center
+  50%
+    background-position: 100% center
+  100%
+    background-position: 0% center
+
+
 .top-row
   margin-top: 21px
 .page-content
   p
     font-size: 1.18em
+.page-hero
+  background-size: cover!important
+  height: 100vh
+  -webkit-animation-name: MOVE-BG
+  -webkit-animation-duration: 20s
+  -webkit-animation-timing-function: ease-in-out
+  -webkit-animation-iteration-count: infinite
+  @media all and (max-width: $medium-break)
+    height: 350px
 .page-title
   font-size: 500%
   font-weight: lighter
