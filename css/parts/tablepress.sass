@@ -47,19 +47,21 @@ h2.tablepress-table-name
 table#wp-calendar
   margin-top: 2em
   font-size: 0.85em
-  color: grey
+  color: rgb(110,110,120)
   td
-    border-bottom: 0
-    padding: 6px 2px 2px 2px
-    text-align: center
+    border-bottom: 0!important
+    padding: 6px 2px 2px 2px!important
+    text-align: center!important
     a
       color: $primary-color
       font-weight: bolder
     &:hover
       color: $secondary-color
-  td#today
+  td.today
     color: white
     background-color: $secondary-color
+  td.eo-past-date
+    color: rgb(200,200,200)
   thead
     th
       text-align: center

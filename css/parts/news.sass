@@ -12,14 +12,15 @@
     color: white
     margin: 0
   p
+    font-size: 0.95em
     margin-top: 6px
     font-weight: bold
     color: $link-color
-.category-headline
-  text-align: right
-  padding: 6px
-  background-color: darken($primary-color,5)
-  text-shadow: 2px 2px 3px black
+  .category-headline
+    text-align: right
+    padding: 6px
+    background-color: darken($primary-color,5)
+    text-shadow: 2px 2px 3px black
 .news-title
   font-size: 1.4em
   @media all and (max-width: $large-break)
@@ -27,7 +28,7 @@
     font-weight: bold
 .news-thumbnail
   width: 108px
-  height: 108px
+  height: 102px
   display: block
   background-size: cover
   margin: 9px 8px 4px 0
@@ -37,7 +38,7 @@
     height: 128px
 .news-date
   text-transform: uppercase
-  font-size: 2.25em
+  font-size: 2.15em
   @media all and (max-width: $large-break)
     font-size: 1.8em
     letter-spacing: 1.2px
@@ -55,3 +56,7 @@
     border-top: 5px solid transparent
     border-bottom: 5px solid transparent
     border-left: 5px solid $base-text-color
+.alt-color
+  background-color: $secondary-color!important
+  .category-headline
+    background-color: darken($secondary-color,5)!important

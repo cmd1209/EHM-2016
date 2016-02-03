@@ -40,13 +40,19 @@
 									<?php service_nav(); ?>
 								</nav>
 								<?php get_template_part('searchform'); ?>
-								<?php get_calendar(); ?>
+								<?php echo do_shortcode('[eo_calendar]'); ?>
+								<!-- <?php get_calendar(); ?>  -->
 							</div>
 						<div class="logo">
 							<a href="<?php echo home_url(); ?>">
 								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
 								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
 							</a>
+						</div>
+						<div class="service-container opening-hours">
+							<p>Täglich geöffnet</br>(außer 24. Dezember)</p>
+							<p>April – Oktober:</br>10.00 – 18.00 Uhr</p>
+							<p>November-März:</br>10.00 – 17.00 Uhr</p>
 						</div>
 						<a href="javascript:void(0);" class="menu-activator">&#9776;</a>
 					</div>
