@@ -1,4 +1,4 @@
-		<div class="col col--10-of-12 col--m-2-of-3 col--s-1-of-1 col--no-gutter">
+		<div class="col col--10-of-12 col--m-2-of-3 col--no-gutter">
 			<div class="flex-container">
 				<div class="flex-child">
 					<?php $museumImage = wp_get_attachment_url( get_post_thumbnail_id(589) ); ?>

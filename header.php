@@ -40,8 +40,10 @@
 									<?php service_nav(); ?>
 								</nav>
 								<?php get_template_part('searchform'); ?>
-								<?php echo do_shortcode('[eo_calendar]'); ?>
-								<!-- <?php get_calendar(); ?>  -->
+								<p>Täglich geöffnet</br>(außer 24. Dezember)</p>
+								<p>April – Oktober:</br>10.00 – 18.00 Uhr</p>
+								<p>November-März:</br>10.00 – 17.00 Uhr</p>
+
 							</div>
 						<div class="logo">
 							<a href="<?php echo home_url(); ?>">
@@ -50,9 +52,7 @@
 							</a>
 						</div>
 						<div class="service-container opening-hours">
-							<p>Täglich geöffnet</br>(außer 24. Dezember)</p>
-							<p>April – Oktober:</br>10.00 – 18.00 Uhr</p>
-							<p>November-März:</br>10.00 – 17.00 Uhr</p>
+							<?php echo do_shortcode('[eo_calendar]'); ?>
 						</div>
 						<a href="javascript:void(0);" class="menu-activator">&#9776;</a>
 					</div>

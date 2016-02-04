@@ -2,7 +2,6 @@
   max-width: 1280px
   margin: 0 auto
   position: relative
-  overflow-x: hidden
   @media all and (max-width: $large-break)
     padding: 0 4px
 main
@@ -16,9 +15,17 @@ main
 
 .service-container
   position: fixed
-  max-width: 185px
+  width: 195px
+  @media all and (max-width: $header-break)
+    width: 150px
   @media all and (max-width: $medium-break)
-    position: relative
+    width: 250px
+  @media all and (max-width: $header-break-medium)
+    width: 180px
+  @media all and (max-width: $small-break)
+    display: none
+  @media all and (max-height: $vertical-header-break)
+    display: none
 .opening-hours
   bottom: 80px
   font-size: 0.9em
@@ -32,9 +39,17 @@ main
 .logo
   position: fixed
   top: 50%
-  max-width: 185px
-  @include transform(translateY(-50%))
+  width: 195px
+  @include transform(translateY(-65%))
+  @media all and (max-width: $header-break)
+    width: 150px
+  @media all and (max-width: $medium-break)
+    width: 250px
+  @media all and (max-width: $header-break-medium)
+    width: 180px
   @media all and (max-width: $small-break)
+    width: 250px
+    left: 4em
     position: absolute
   img
     width: 100%
@@ -52,7 +67,7 @@ main
   padding-right: 10px
   overflow: hidden
   @media all and (max-width: $medium-break)
-    height: 350px
+    height: 320px
     width: 100%
 
 .slidedown
@@ -61,6 +76,7 @@ main
   position: fixed
   height: 100%
   opacity: 0
+  left: 0
   top: -100%
   background-color: white
   z-index: 2
@@ -75,10 +91,13 @@ main
   bottom: 20px
   padding: 0 8px
   z-index: 5
+  height: 50px
   color: $primary-color
   font-size: 2em
   text-decoration: none
   background-color: rgba(white,0.85)
+  @media all and (max-width: $small-break)
+    top: 0
   &:hover
     color: $secondary-color
 
