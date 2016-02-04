@@ -1,6 +1,7 @@
+article
+  margin-bottom: 2em
+  overflow: hidden
 .news
-  article
-    margin: 2em 0
   -webkit-font-smoothing: antialiased
   -moz-font-smoothing: antialiased
   -o-font-smoothing: antialiased
@@ -14,8 +15,8 @@
     margin-top: 6px
     color: $primary-color
   .category-headline
-    text-align: right
-    padding: 6px
+    margin-bottom: 0.5em
+
     // text-shadow: 2px 2px 3px black
 .news-title
   font-size: 1.4em
@@ -23,28 +24,28 @@
     font-size: 1.2em
     font-weight: bold
 .news-thumbnail
-  width: 108px
-  height: 102px
+  width: 60px
+  height: 60px
   display: block
   background-size: cover!important
   border-radius: $base-border-radius
-  margin: 9px 8px 0 0
+  margin: 9px 8px auto 0
   float: left
+  clear: left
   @media all and (max-width: $medium-break)
     width: 216px
     height: 128px
 .news-date
   text-transform: uppercase
-  font-size: 2.15em
+  font-size: 1.85em
   @media all and (max-width: $large-break)
     font-size: 1.8em
     letter-spacing: 1.2px
 .news-link
   color: $link-color
-  float: right
   text-decoration: none
   &:hover
-    color: $secondary-color
+    color: $primary-color
   &:after
     margin-left: 6px
     content: ""
@@ -54,3 +55,9 @@
     border-left: 5px solid $base-text-color
 .alt-color
   .category-headline
+.left
+  width: 20%
+  float: left
+.right
+  width: 80%
+  float: right
