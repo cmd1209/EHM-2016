@@ -11,7 +11,7 @@
           <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>);"></div>
         <?php endif ?>
       </div>
-      <div class="col col--8-of-12 page-content">
+      <div class="col col--6-of-12 page-content">
         <h1 class="page-title"><?php the_title(); ?></h1>
         <nav class="sub-page-menu">
           <?php
@@ -30,6 +30,9 @@
           <?php else: ?> <!-- don't display anything because it seems to grab the first paragraph -->
           <?php endif ?>
           <?php the_content(); ?>
+        </div>
+        <div class="col col--2-of-12">
+          <?php get_sidebar(); ?>
         </div>
       </section>
     <?php endwhile; ?>

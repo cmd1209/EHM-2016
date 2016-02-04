@@ -12,8 +12,7 @@
   p
     font-size: 0.95em
     margin-top: 6px
-    font-weight: bold
-    color: grey
+    color: $primary-color
   .category-headline
     text-align: right
     padding: 6px
@@ -27,8 +26,9 @@
   width: 108px
   height: 102px
   display: block
-  background-size: cover
-  margin: 9px 8px 4px 0
+  background-size: cover!important
+  border-radius: $base-border-radius
+  margin: 9px 8px 0 0
   float: left
   @media all and (max-width: $medium-break)
     width: 216px
@@ -43,7 +43,6 @@
   color: $link-color
   float: right
   text-decoration: none
-  font-weight: bold
   &:hover
     color: $secondary-color
   &:after
