@@ -9,7 +9,7 @@
   		$('.slidedown').toggleClass("active")
   		$('.stage').toggleClass("shoved")
 		});
-		
+
 		$(".owl-carousel").owlCarousel({
 			autoPlay : 10000,
 			navigation: false,
@@ -17,6 +17,7 @@
 			goToFirstSpeed : 3500,
 			singleItem : true,
 		});
+
 });
 
 })(jQuery, this);
