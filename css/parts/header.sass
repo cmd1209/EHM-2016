@@ -1,7 +1,6 @@
 .wrapper
-  max-width: 1280px
-  margin: 0 auto
-  position: relative
+  position: absolute
+  display: flex
   @media all and (max-width: $large-break)
     padding: 0 4px
 main
@@ -13,52 +12,46 @@ main
   margin-left: 0
   @include transition(all 0.25s ease)
 
-.service-container
+header
+  box-sizing: border-box
+  min-width: 220px
+  background-color: white
+.header-position
+  box-sizing: border-box
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  background-color: white
+  width: 220px
+  padding: 1em
+  min-height: 100vh
+  top: 0
+  bottom: 0
   position: fixed
-  width: 195px
-  @media all and (max-width: $header-break)
-    width: 150px
-  @media all and (max-width: $medium-break)
-    width: 250px
-  @media all and (max-width: $header-break-medium)
-    width: 180px
-  @media all and (max-width: $small-break)
-    display: none
-  @media all and (max-height: $vertical-header-break)
-    display: none
 
+.header-child
+  display: block
+  flex: 1
+.page-thumbnail
+  width: 325px
+.thumbnail-position
+  width: 325px
+  position: fixed
+  top: 0
+  bottom: 0
 .opening-hours
   font-size: 0.9em
   color: $primary-color
 
-.calendar
-  bottom: 80px
 
 .language
   ul
     padding-left: 0!important
   li
     display: inline
-.logo
-  position: fixed
-  top: 50%
-  width: 195px
-  @include transform(translateY(-65%))
-  @media all and (max-width: $header-break)
-    width: 150px
-  @media all and (max-width: $medium-break)
-    width: 250px
-  @media all and (max-width: $header-break-medium)
-    width: 180px
-  @media all and (max-width: $small-break)
-    width: 250px
-    left: 4em
-    position: absolute
-  img
-    width: 100%
 
-.logo-nav
-  width: 200px
+.logo
+  width: 85%
   img
     width: 100%
 
@@ -92,7 +85,7 @@ main
   position: fixed
   bottom: 20px
   padding: 0 8px
-  z-index: 5
+  z-index: 999
   height: 50px
   color: $primary-color
   font-size: 2em
