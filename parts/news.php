@@ -16,7 +16,7 @@
 				<?php endif; ?>
 			</div>
 			<div class="right">
-				<h3 class="news-date"><?php the_date( 'm/d/Y' ); ?> </h3>
+				<h3 class="news-date"><?php the_date( 'd/m/Y' ); ?> </h3>
 				<h3 class="news-title"><?php the_title(); ?></h3>
 				<p class="news-text"><?php the_excerpt(); ?></p>
 				<a href="<?php the_permalink(); ?>" class="news-link">mehr lesen</a>
