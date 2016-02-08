@@ -19,9 +19,9 @@ header
   width: 220px
   background-color: white
   box-sizing: border-box
-  display: flex
-  justify-content: space-between
-  flex-direction: column
+  @include display(flex)
+  @include justify-content(space-between)
+  @include flex-direction(column)
   background-color: white
   padding: 1em 1em 3em 1em
   min-height: 100vh
@@ -29,7 +29,7 @@ header
   bottom: 0
   position: fixed
   @media all and (max-width: $medium-break)
-    flex-direction: row
+    @include flex-direction(row)
     position: relative
     min-height: 250px
     height: 250px
