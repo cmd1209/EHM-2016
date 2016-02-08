@@ -9,12 +9,10 @@ section.intro
   background-size: cover!important
   margin-bottom: 1em
   @include transition(all 0.25s ease)
-  -webkit-filter: sepia(0.45)
-  filter: sepia(0.45)
+  @include filter(sepia(45%))
   &:hover
     @include transition(all 0.5s ease)
-    -webkit-filter: sepia(0)
-    filter: sepia(0)
+    @include filter(sepia(0%))
   @media all and (max-width: $medium-break)
     height: 300px
 .full-area-link
