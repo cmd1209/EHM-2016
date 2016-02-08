@@ -2,7 +2,6 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 <section id="content">
   <div class="page-thumbnail">
-    <div class="thumbnail-position">
       <?php if (has_post_thumbnail() ): ?>
         <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
         <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>);"></div>
@@ -10,7 +9,6 @@
         <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(252) ); ?>
         <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>);"></div>
       <?php endif ?>
-    </div>
   </div>
   <div class="page-content">
     <div class="wordpress-import">

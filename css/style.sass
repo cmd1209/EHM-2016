@@ -55,9 +55,8 @@ p
 .yellow
   background-color: rgba(yellow,0.5)
 aside.sidebar
-  min-width: 250px
-  max-width: 250px
-  width: 250px
+  @media all and (max-width: $large-break)
+    width: 100%
   @media all and (max-width: $medium-break)
     display: none
 

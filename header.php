@@ -23,17 +23,13 @@
 
 	</head>
 	<body <?php body_class(); ?>>
-
 		<!-- wrapper -->
-		<div class="wrapper">
 			<nav class="nav slidedown" role="navigation">
 				<?php html5blank_nav(); ?>
 			</nav>
-		</div>
-		<div class="wrapper">
+		<div class="wrapper stage">
 			<header>
-				<div class="header-position">
-					<div class="header-child">
+					<div class="header-child small-hidden">
 						<nav class="nav language">
 							<?php service_nav(); ?>
 						</nav>
@@ -50,9 +46,8 @@
 							</a>
 						</div>
 					</div>
-					<div class="header-child">
+					<div class="header-child small-hidden">
 						<?php echo do_shortcode('[eo_calendar]'); ?>
 					</div>
 					<a href="javascript:void(0);" class="menu-activator">&#9776;</a>
-				</div>
 			</header>

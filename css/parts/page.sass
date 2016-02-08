@@ -7,11 +7,22 @@
     background-position: 0% center
 
 
+section#content
+  margin-left: 220px
+  @media all and (max-width: $medium-break)
+    margin-left: 0
+    padding: 0 8px
+
 .top-row
   margin-top: 21px
 .page-content
   margin-left: 335px
   display: flex
+  flex-direction: row
+  @media all and (max-width: $large-break)
+    flex-direction: column
+  @media all and (max-width: $medium-break)
+    margin-left: 0
   p
     font-size: 1em
 .page-hero
