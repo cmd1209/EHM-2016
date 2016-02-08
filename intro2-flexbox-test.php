@@ -1,4 +1,4 @@
-		<div class="col col--10-of-12 col--m-2-of-3 col--no-gutter">
+<section id="content">
 			<div class="flex-container">
 				<div class="flex-child">
 					<?php $museumImage = wp_get_attachment_url( get_post_thumbnail_id(589) ); ?>
@@ -18,10 +18,9 @@
 					<?php $eventsImage = wp_get_attachment_url( get_post_thumbnail_id(612) ); ?>
 					<div class="intro-key" style="background:url(<?php echo $eventsImage; ?>)center center;">
 						<a href="<?php echo get_page_link(612); ?>" class="full-area-link"></a>
+						<a href="<?php echo get_page_link(612); ?>" class="intro-link">Veranstaltungen & <br>Restaurant</a>
 					</div>
-					<a href="<?php echo get_page_link(612); ?>" class="intro-link">Veranstaltungen & <br>Restaurant</a>
 				</div>
 			</div>
-		</div>
-	</div>
+
 </section>

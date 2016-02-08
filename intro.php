@@ -16,18 +16,24 @@
 		</div>
 
 		<div class="col col--3-of-12">
-			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-3019.jpg)no-repeat center center;"></div>
-			<a href="#" class="intro-link">Museum</a>
+			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-3019.jpg)no-repeat center center;">
+				<a href="#" class="intro-link">Museum</a>
+
+			</div>
 		</div>
 		<div class="col col--3-of-12">
 			<?php the_post_thumbnail(); ?>
 
-			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4582.jpg)no-repeat center center;"></div>
-			<a href="#" class="intro-link">Ihr Besuch</a>
+			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4582.jpg)no-repeat center center;">
+
+				<a href="#" class="intro-link">Ihr Besuch</a>
+			</div>
 		</div>
 		<div class="col col--3-of-12">
-			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4949_1.jpg)no-repeat center center;"></div>
-			<a href="#" class="intro-link">Veranstaltungen & Gastronomie</a>
+			<div class="intro-key" style="background:url(<?php $url = content_url(); echo $url; ?>/uploads/2016/01/WH1607-4949_1.jpg)no-repeat center center;">
+
+				<a href="#" class="intro-link">Veranstaltungen & Gastronomie</a>
+			</div>
 		</div>
 	</div> <!--end row -->
 </section>

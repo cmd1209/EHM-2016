@@ -17,6 +17,14 @@
 			goToFirstSpeed : 3500,
 			singleItem : true,
 		});
+		var introrollover = $(".intro-key");
+
+		introrollover.mouseenter(function() {
+  		$(this).find(".intro-link").addClass("intro-link-active");
+		});
+		introrollover.mouseleave(function() {
+  		$(this).find(".intro-link").removeClass("intro-link-active");
+		});
 
 });
 
