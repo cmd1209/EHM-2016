@@ -10,7 +10,7 @@
         <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>);"></div>
       <?php endif ?>
   </div>
-  <div class="page-content">
+  <div class="page-content col col--9-of-12">
     <div class="wordpress-import">
       <h1 class="page-title"><?php the_title(); ?></h1>
       <nav class="sub-page-menu">
