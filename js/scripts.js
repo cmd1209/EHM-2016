@@ -5,10 +5,20 @@
 		'use strict';
 
 		// DOM ready, take it away
-		$(".menu-activator").click(function() {
-  		$('.slidedown').toggleClass("active")
-  		$('.stage').toggleClass("shoved")
-		});
+
+		var slidewidth = $('.slidedown').width();
+		var slidedown = $( '.slidedown' );
+		var stage = $('.stage');
+
+		$(".menu-activator").toggle(
+  function() {
+    slidedown.addClass( "active" );
+		stage.css("margin-left", slidewidth);
+  }, function() {
+    slidedown.removeClass( "active" );
+		stage.css("margin-left", "0");
+  }
+);
 
 		$(".owl-carousel").owlCarousel({
 			autoPlay : 10000,
@@ -33,7 +43,7 @@
     var winTop = $(window).scrollTop();
 		var header = $("header");
 		var logo = $(".logo");
-    if(winTop >= 35 && $(".page-thumbnail").css("position") == "relative" ){
+    if(winTop >= 35 && header.css("width") >= "250px" ){
       header.addClass("header-sticky");
 			logo.addClass("logo-minimal");
     }else{

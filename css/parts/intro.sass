@@ -30,15 +30,15 @@ section.intro
   margin-bottom: 3em
   background-color: white
   padding: 8px 16px
-  @include transform(translateY(-50%))
+  display: block
+  @include transform(translatey(-50%))
   @include transition(all 0.25s ease)
   @media all and (max-width: $medium-break)
+    @include transform(translateX(-50%)translateY(-100%))
     font-size: 1.75em
-    top: 50%
-  &:hover
-    color: $secondary-color
-    padding: 8px 16px 8px 42px
-    @include transition(all 0.25s ease)
+    top: 100%
+    left: 50%
+    text-align: center
   // &:after
   //   margin-left: 8px
   //   content: ""
@@ -67,6 +67,7 @@ section.intro
   position: relative
   @include display(flex)
   @media all and (max-width: $medium-break)
+    margin-top: 200px
     @include flex-direction(column)
 .flex-child
   @include transition(all 0.65s ease)
@@ -92,3 +93,7 @@ section.intro
   color: $secondary-color
   padding: 8px 16px 8px 48px
   @include transition(all 0.25s ease)
+  @media all and (max-width: $medium-break)
+    color: $secondary-color
+    padding: 8px 42px 8px 42px
+    @include transition(all 0.25s ease)

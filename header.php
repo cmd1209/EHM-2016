@@ -29,14 +29,16 @@
 			</nav>
 		<div class="wrapper stage">
 			<header>
-					<div class="header-child small-hidden">
+					<div class="header-child mobile-right">
 						<nav class="nav language">
 							<?php service_nav(); ?>
 						</nav>
-						<?php get_template_part('searchform'); ?>
-						<p class="opening-hours">Täglich geöffnet</br>(außer 24. Dezember)</p>
-						<p class="opening-hours">April – Oktober:</br>10.00 – 18.00 Uhr</p>
-						<p class="opening-hours">November-März:</br>10.00 – 17.00 Uhr</p>
+						<div class="small-hidden">
+							<?php get_template_part('searchform'); ?>
+							<p class="opening-hours">Täglich geöffnet</br>(außer 24. Dezember)</p>
+							<p class="opening-hours">April – Oktober:</br>10.00 – 18.00 Uhr</p>
+							<p class="opening-hours">November-März:</br>10.00 – 17.00 Uhr</p>
+						</div>
 					</div>
 					<div class="header-child">
 						<div class="logo">
