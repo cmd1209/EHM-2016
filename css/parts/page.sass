@@ -23,35 +23,42 @@ section#content
     margin-left: 0
   p
     font-size: 1em
+    @media all and (max-width: $medium-break)
+      font-size: 1.15em
+      padding: 0 1em
 .page-hero
   background-size: cover!important
   height: 100vh
   @include animation(MOVE-BG 60s ease-in-out infinite)
   @media all and (max-width: $medium-break)
     @include transition(all 0.5s ease)
-    height: 350px
+    background-size: 100%!important
+    background-position: top!important
+    background-attachment: fixed!important
+    margin-top: 150px
+    height: 385px
 .page-title
   font-size: 350%
   font-weight: lighter
   margin: 32px 0 0 0
-  @media all and (max-width: $small-break)
+  @media all and (max-width: $medium-break)
     text-align: center
 .page-excerpt
-  width: 85%
   font-size: 1.15em
   line-height: 1.5em
   font-weight: lighter
-  margin: 1em 0 2em 0
-  @media all and (max-width: $small-break)
-    width: 100%
-    font-size: 150%
-    line-height: 125%
+  margin: 0.5em 0 1em 0
+  padding: 0.5em 0
+  border-top: 1px solid rgb(200,200,200)
+  border-bottom: 1px solid rgb(200,200,200)
+  @media all and (max-width: $medium-break)
+    font-size: 1.25em
+    text-align: center
 .sub-page-menu
-  width: 100%
   padding: 12px 0
   margin-bottom: 2em
-  @media all and (max-width: $small-break)
-    width: 100%
+  @media all and (max-width: $medium-break)
+    text-align: center
   ul
     padding: 0
   li

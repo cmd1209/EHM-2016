@@ -1,6 +1,6 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-				<div class="row">
+				<div class="row medium-hidden">
 					<div class="col col--4-of-12">
 						<div class="footer-logo sponsor-logo">
 							<a href="<?php echo home_url(); ?>">

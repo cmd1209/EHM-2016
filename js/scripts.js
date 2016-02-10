@@ -26,6 +26,22 @@
   		$(this).find(".intro-link").removeClass("intro-link-active");
 		});
 
-});
+
+
+
+  $(window).scroll(function(){
+    var winTop = $(window).scrollTop();
+		var header = $("header");
+		var logo = $(".logo");
+    if(winTop >= 35 && $(".page-thumbnail").css("position") == "relative" ){
+      header.addClass("header-sticky");
+			logo.addClass("logo-minimal");
+    }else{
+      header.removeClass("header-sticky");
+			logo.removeClass("logo-minimal");
+    }//if-else
+  });//win func.
+});//ready func.
+
 
 })(jQuery, this);

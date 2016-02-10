@@ -2,8 +2,6 @@
   box-sizing: border-box
   overflow-x: hidden
   position: absolute
-  @media all and (max-width: $large-break)
-    padding: 0 4px
 main
   padding: 0 4px
 
@@ -30,11 +28,21 @@ header
   position: fixed
   @media all and (max-width: $medium-break)
     @include flex-direction(row)
-    position: relative
-    min-height: 180px
-    height: 180px
+    @include transition(all 0.25s ease)
+    position: absolute
+    min-height: 200px
+    height: 200px
     width: 100%
     min-width: 100%
+    overflow: hidden
+    z-index: 50
+
+.header-sticky
+  @include transition(all 0.25s ease)
+  position: fixed
+  min-height: 45px
+  height: 45px
+
 
 .header-child
   display: block
@@ -70,6 +78,12 @@ header
     left: 60px
   img
     width: 100%
+
+.logo-minimal
+  @include transition(all 0.25s ease)
+  width: 82px!important
+  top: 8px!important
+  left: 82px!important
 
 // Sliding Column Header Element
 
