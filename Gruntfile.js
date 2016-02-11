@@ -18,15 +18,13 @@ module.exports = function(grunt) {
                 files: ['js/*.js'],
                 tasks: ['uglify'],
                 options: {
-                    spawn: false,
                 },
             },
             css: {
                 files: ['**/*.sass','**/*.scss'],
                 tasks: ['sass'],
                 options: {
-                    spawn: false,
-                }
+                },
             },
         },
 
