@@ -1,10 +1,9 @@
 table.tablepress
-  box-shadow: 0 15px 25px -10px black
-  color: white
+  color: $primary-color
   font-size: 18px
-  border: 0.5em solid $primary-color!important
+  border: 0.5em solid $muted-grey!important
   h2
-    color: white
+    color: $primary-color
     margin: 0
   i
     font-size: 16px
@@ -12,17 +11,17 @@ table.tablepress
   table-layout: auto
   thead
     th
-      background-color: $primary-color
+      background-color: $muted-grey
       border: none
   tbody
-    background-color: $primary-color
+    background-color: $muted-grey
     tr
-      border-bottom: 8px solid $primary-color
+      border-bottom: 8px solid $muted-grey
       .column-1, .column-2
-        background-color: darken($primary-color,7)
+        background-color: lighten($muted-grey,7)
       .column-3
-        background-color: darken($primary-color,5)
-        border-left: 8px solid $primary-color
+        background-color: lighten($muted-grey,5)
+        border-left: 8px solid $muted-grey
     td
       border: none
   .column-1
@@ -54,7 +53,7 @@ table#wp-calendar, .eo_fullcalendar > table
     text-align: center!important
     position: relative
     a
-      color: $primary-color
+      color: $muted-grey
       font-weight: bolder
     &:hover
       color: $secondary-color
@@ -63,7 +62,7 @@ table#wp-calendar, .eo_fullcalendar > table
       position: absolute
       font-size: 1em
       color: white
-      background-color: $primary-color
+      background-color: $muted-grey
       left: 0
       top: 0
       padding: 4px
