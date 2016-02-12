@@ -1,14 +1,3 @@
-.wrapper
-  box-sizing: border-box
-  overflow-x: hidden
-  position: static
-
-.stage
-  width: 100%
-  position: relative
-  margin-left: 0
-  @include transition(all 0.25s ease)
-
 header
   box-sizing: border-box
   min-width: $header-margin
@@ -127,7 +116,7 @@ header
 .menu-activator
   z-index: 999
   color: $primary-color
-  font-size: 3.5em
+  font-size: 3em
   text-decoration: none
   display: block
   position: absolute
@@ -139,7 +128,7 @@ header
     left: 4px
     @include transform(translateX(0)translateY(-25%))
   &:hover
-    color: $secondary-color
+    color: $primary-color
 
 // Navigation Elements
 

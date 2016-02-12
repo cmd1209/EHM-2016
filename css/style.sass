@@ -36,6 +36,17 @@ $header-margin-top: 4em
 body
   background-color: white
   font-family: $sans
+
+.wrapper
+  position: static
+
+.stage
+  width: 100%
+  position: relative
+  margin-left: 0
+  @include transition(all 0.25s ease)
+
+
 h1, h2, h3, h4, h5, h6
   font-family: $headline-font
   font-weight: lighter
