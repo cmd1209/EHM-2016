@@ -11,15 +11,15 @@
 
 header
   box-sizing: border-box
-  min-width: 220px
-  width: 220px
+  min-width: $header-margin
+  width: $header-margin
   background-color: white
   box-sizing: border-box
   @include display(flex)
   @include justify-content(space-between)
   @include flex-direction(column)
   background-color: white
-  padding: 1em 1em 3em 1em
+  padding: 4px
   min-height: 100vh
   top: 0
   bottom: 0
@@ -27,8 +27,8 @@ header
   @media all and (max-width: $medium-break)
     @include flex-direction(row)
     @include transition(all 0.25s ease)
-    min-height: 200px
-    height: 200px
+    min-height: $header-margin-top
+    height: $header-margin-top
     width: 100%
     min-width: 100%
     overflow: hidden
@@ -44,10 +44,21 @@ header
   height: 45px
   box-shadow: 0px 10px 25px -10px grey
 
-
 .header-child
-  display: block
   flex: 1
+  position: relative
+.orderA
+  order: 1
+  @media all and (max-width: $medium-break)
+    order: 3
+.orderB
+  order: 2
+  @media all and (max-width: $medium-break)
+    order: 2
+.orderC
+  order: 3
+  @media all and (max-width: $medium-break)
+    order: 1
 .page-thumbnail
   position: fixed
   top: 0
@@ -69,14 +80,16 @@ header
     display: inline
   a
     display: inline-block
-
 .logo
-  width: 85%
+  width: 100%
+  position: absolute
+  top: 50%
+  @include transform(translateY(-50%))
   @media all and (max-width: $medium-break)
-    width: 180px
-    position: absolute
-    top: 50px
-    left: 60px
+    width: 62px
+    top: 0
+    left: 50%
+    @include transform(translateY(-5px)translateX(-50%))
   img
     width: 100%
 
@@ -112,21 +125,21 @@ header
 // Sliding Menu Activator
 
 .menu-activator
-  position: absolute
-  bottom: 0px
-  left: 0px
-  padding: 4px 8px
   z-index: 999
-  height: 50px
   color: $primary-color
-  font-size: 2em
-  line-height: 2em
+  font-size: 3.5em
   text-decoration: none
+  display: block
+  position: absolute
+  bottom: 0
+  left: 50%
+  @include transform(translateX(-50%))
   @media all and (max-width: $medium-break)
     top: 0
+    left: 4px
+    @include transform(translateX(0)translateY(-25%))
   &:hover
     color: $secondary-color
-
 
 // Navigation Elements
 
