@@ -31,12 +31,14 @@
         <?php endif ?>
         <?php the_content(); ?>
     </div>
-    <?php get_sidebar(); ?>
-  </div>
-<?php endwhile; ?>
+    <aside class="sidebar col col--3-of-12" role="complementary">
+      <?php get_sidebar(); ?>
+    </aside>
+  <?php endwhile; ?>
 <?php endif; ?>
-  <?php rewind_posts();?>
-  <?php wp_reset_query();?>
-  <br class="clear">
-  <?php get_footer(); ?>
+<?php rewind_posts();?>
+<?php wp_reset_query();?>
+<br class="clear">
+<?php get_footer(); ?>
+  </div>
 </section>

@@ -1,12 +1,25 @@
 article
-  margin-bottom: 2em
+  border-bottom: 1px solid darken($muted-grey,5)
+  padding: 4px 4px 16px 4px
   overflow: hidden
+  @media all and (max-width: $medium-break)
+    border: none
+.news-header
+  color: white
+  background-color: $primary-color
+  padding-left: 6px
+  margin-bottom: 2px
+  @media all and (max-width: $medium-break)
+    font-size: 2.5em
+    padding: 16px
+    text-align: center
 .news
   -webkit-font-smoothing: antialiased
   -moz-font-smoothing: antialiased
   -o-font-smoothing: antialiased
   color: $primary-color
-  padding: 10px
+  background-color: $muted-grey
+  padding: 0 8px 0 0
   h1, h2, h3, h4, h5, h6
     font-family: $sans
     margin: 0
@@ -16,42 +29,32 @@ article
     color: $primary-color
   .category-headline
     margin-bottom: 0.5em
-
     // text-shadow: 2px 2px 3px black
 .news-title
   font-size: 1.4em
   @media all and (max-width: $large-break)
     font-size: 1.5em
 .news-thumbnail
-  width: 93%
-  height: 60px
+  width: 100%
+  height: 275px
   display: block
   background-size: cover!important
   border-radius: $base-border-radius
-  margin: 9px 8px auto 0
-  float: left
-  clear: left
-  @media all and (max-width: $medium-break)
-    width: 93%
-    height: 95px
+  margin: 8px 0
 .news-date
+  text-align: right
   text-transform: uppercase
-  font-size: 1.85em
-  @media all and (max-width: $large-break)
-    font-size: 1.8em
-    letter-spacing: 1.2px
+  font-size: 1.125em
+  padding: 4px
+  color: $secondary-color
 .news-link
   color: $link-color
   text-decoration: none
+  text-align: right!important
+  float: right
+  display: block
   &:hover
     color: $primary-color
-  &:after
-    margin-left: 6px
-    content: ""
-    display: inline-block
-    border-top: 5px solid transparent
-    border-bottom: 5px solid transparent
-    border-left: 5px solid $base-text-color
 .left
   position: relative
   width: 20%

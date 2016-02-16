@@ -5,7 +5,6 @@
     background-position: 100% center
   100%
     background-position: 0% center
-
 section#content
   margin-left: $header-margin
   @media all and (max-width: $medium-break)
@@ -24,18 +23,20 @@ section#content
     font-size: 1em
     @media all and (max-width: $medium-break)
       font-size: 1.15em
-      padding: 0 1em
 .page-hero
   background-size: cover!important
   height: 100vh
   @include animation(MOVE-BG 60s ease-in-out infinite)
   @media all and (max-width: $medium-break)
     @include transition(all 0.5s ease)
-    background-size: 100%!important
-    background-position: top!important
-    background-attachment: fixed!important
+    background-size: 100%
+    background-position: center center
     margin-top: $header-margin-top
     height: 385px
+  @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
+    margin-top: 0!important
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+    margin-top: 0!important
 .page-title
   font-size: 350%
   font-weight: lighter

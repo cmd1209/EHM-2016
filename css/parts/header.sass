@@ -23,8 +23,12 @@ header
     overflow: hidden
     z-index: 50
   @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
+    min-height: $header-margin-top
+    height: $header-margin-top
     position: absolute
   @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+    min-height: $header-margin-top
+    height: $header-margin-top
     position: absolute
 
 .header-sticky
@@ -120,11 +124,11 @@ header
   text-decoration: none
   display: block
   position: absolute
-  bottom: 0
+  bottom: 6px
   left: 50%
   @include transform(translateX(-50%))
   @media all and (max-width: $medium-break)
-    top: 0
+    top: 6px
     left: 4px
     @include transform(translateX(0)translateY(-25%))
   &:hover
