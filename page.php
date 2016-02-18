@@ -21,8 +21,12 @@
         $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
         if ($children) {
           $parent_title = get_the_title($post->post_parent);?>
-          <li><a href="<?php echo get_permalink($post->post_parent) ?>"><?php echo $parent_title;?></a></li>
-          <?php echo $children; ?>
+          <?php if ($post->post_parent): ?>
+            <li class="sub-page-menu-parent"><a href="<?php echo get_permalink($post->post_parent) ?>"><?php echo $parent_title;?></a></li>
+            <?php echo $children; ?>
+            <?php else: ?>
+            <?php echo $children; ?>
+          <?php endif; ?>
           <?php } ?>
         </nav>
         <?php if (has_excerpt() ):?>
