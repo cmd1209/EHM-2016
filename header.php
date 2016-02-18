@@ -29,27 +29,20 @@
 			</nav>
 		<div class="wrapper stage">
 			<header>
-					<div class="header-child mobile-right">
-						<nav class="nav language">
+					<div class="header-child orderA ">
+						<nav class="nav language mobile-right">
 							<?php service_nav(); ?>
 						</nav>
-						<div class="small-hidden">
-							<?php get_template_part('searchform'); ?>
-							<p class="opening-hours">Täglich geöffnet</br>(außer 24. Dezember)</p>
-							<p class="opening-hours">April – Oktober:</br>10.00 – 18.00 Uhr</p>
-							<p class="opening-hours">November-März:</br>10.00 – 17.00 Uhr</p>
-						</div>
 					</div>
-					<div class="header-child">
+					<div class="header-child orderB">
 						<div class="logo">
 							<a href="<?php echo home_url(); ?>">
 								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo-vert.svg" alt="Logo" class="logo-img">
 							</a>
 						</div>
 					</div>
-					<div class="header-child small-hidden">
-						<?php echo do_shortcode('[eo_calendar]'); ?>
+					<div class="header-child orderC">
+						<a href="javascript:void(0);" class="menu-activator">&#9776;</a>
 					</div>
-					<a href="javascript:void(0);" class="menu-activator">&#9776;</a>
 			</header>

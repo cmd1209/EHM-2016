@@ -38,19 +38,19 @@
 
 
 
-
-  $(window).scroll(function(){
-    var winTop = $(window).scrollTop();
-		var header = $("header");
-		var logo = $(".logo");
-    if(winTop >= 35 && header.css("width") >= "250px" ){
-      header.addClass("header-sticky");
-			logo.addClass("logo-minimal");
-    }else{
-      header.removeClass("header-sticky");
-			logo.removeClass("logo-minimal");
-    }//if-else
-  });//win func.
+//
+//   $(window).scroll(function(){
+//     var winTop = $(window).scrollTop();
+// 		var header = $("header");
+// 		var logo = $(".logo");
+//     if(winTop >= 35 && header.css("height") <= "950px" ){
+//       header.addClass("header-sticky");
+// 			logo.addClass("logo-minimal");
+//     }else{
+//       header.removeClass("header-sticky");
+// 			logo.removeClass("logo-minimal");
+//     }//if-else
+//   });//win func.
 });//ready func.
 
 

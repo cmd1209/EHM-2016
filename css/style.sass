@@ -15,6 +15,8 @@ $keyvisual-mobile-height: 300px
 
 $vertical-header-break: 720px
 
+$header-margin: 6em
+$header-margin-top: 4em
 
 @mixin transition($args...)
   -webkit-transition: $args
@@ -34,6 +36,17 @@ $vertical-header-break: 720px
 body
   background-color: white
   font-family: $sans
+
+.wrapper
+  position: static
+
+.stage
+  width: 100%
+  position: relative
+  margin-left: 0
+  @include transition(all 0.25s ease)
+
+
 h1, h2, h3, h4, h5, h6
   font-family: $headline-font
   font-weight: lighter
@@ -56,7 +69,7 @@ p
   background-color: rgba(yellow,0.5)
 aside.sidebar
   @media all and (max-width: $medium-break)
-    display: none
+  
 
 img
   height: auto

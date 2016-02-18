@@ -1,26 +1,41 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-				<div class="row medium-hidden">
-					<div class="col col--4-of-12">
-						<div class="footer-logo sponsor-logo">
-							<a href="<?php echo home_url(); ?>">
-								<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-								<img src="<?php echo get_template_directory_uri(); ?>/img/hansestadt.svg" alt="Logo" class="hansestadt-img">
-							</a>
+				<div class="row">
+					<div class="col col--3-of-12 col--m-1-of-2">
+						<?php get_template_part('searchform'); ?>
+						<h5>Europäisches Hansemuseum</h5>
+						<p class="opening-hours">An der Untertrave 1</br>
+							D-23552 Lübeck</br>
+							+49 (0) 451 80 90 99-0</br>
+							<a href="mailto:info@hansemuseum.eu">info@hansemuseum.eu</a></p>
+							<p class="opening-hours">Täglich geöffnet</br>(außer 24. Dezember)</p>
+							<p class="opening-hours">April – Oktober:</br>10.00 – 18.00 Uhr</p>
+							<p class="opening-hours">November-März:</br>10.00 – 17.00 Uhr</p>
+					</div>
+						<div class="col col--9-of-12 col--m-1-of-2">
+							<div class="row">
+								<div class="col col--4-of-12 col--m-1-of-2">
+							<div class="footer-logo sponsor-logo">
+								<a href="<?php echo home_url(); ?>">
+									<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+									<img src="<?php echo get_template_directory_uri(); ?>/img/hansestadt.svg" alt="Logo" class="hansestadt-img">
+								</a>
+							</div>
+							</div>
+						<div class="col col--4-of-12 col--m-6-of-12">
+							<div class="footer-logo sponsor-logo">
+								<p class="footer-caption">Gefördert durch die:</p>
+								<img class="footer-logo" src="<?php $url = content_url(); echo $url; ?>/uploads/2015/01/possehl.png" alt="">
+							</div>
+						</div>
+						<div class="col col--4-of-12 col--m-6-of-12">
+							<div class="footer-logo sponsor-logo">
+								<p class="footer-caption">Gefördert durch die Europäische Union, Europäischer Fonds für regionale Entwicklung (EFRE),den Bund und das Land Schleswig-Holstein</p>
+								<img class="footer-logo" src="<?php $url = content_url(); echo $url; ?>/uploads/2015/01/zukunftsprogramm.png" alt="">
+							</div>
 						</div>
 					</div>
-					<div class="col col--4-of-12">
-						<div class="footer-logo sponsor-logo">
-							<p class="footer-caption">Gefördert durch die:</p>
-							<img class="footer-logo" src="<?php $url = content_url(); echo $url; ?>/uploads/2015/01/possehl.png" alt="">
 						</div>
-					</div>
-					<div class="col col--4-of-12">
-						<div class="footer-logo sponsor-logo">
-							<p class="footer-caption">Gefördert durch die Europäische Union, Europäischer Fonds für regionale Entwicklung (EFRE),den Bund und das Land Schleswig-Holstein</p>
-							<img class="footer-logo" src="<?php $url = content_url(); echo $url; ?>/uploads/2015/01/zukunftsprogramm.png" alt="">
-						</div>
-					</div>
 				</div>
 
 				<div class="row">

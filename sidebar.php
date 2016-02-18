@@ -1,5 +1,4 @@
 <!-- sidebar -->
-<aside class="sidebar col col--3-of-12" role="complementary">
 
 	<div class="sidebar-widget">
 		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
@@ -9,5 +8,4 @@
 		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
 	</div>
 
-</aside>
 <!-- /sidebar -->

@@ -5,10 +5,8 @@
     background-position: 100% center
   100%
     background-position: 0% center
-
-
 section#content
-  margin-left: 220px
+  margin-left: $header-margin
   @media all and (max-width: $medium-break)
     margin-left: 0
 .wordpress-import
@@ -25,18 +23,20 @@ section#content
     font-size: 1em
     @media all and (max-width: $medium-break)
       font-size: 1.15em
-      padding: 0 1em
 .page-hero
   background-size: cover!important
   height: 100vh
   @include animation(MOVE-BG 60s ease-in-out infinite)
   @media all and (max-width: $medium-break)
     @include transition(all 0.5s ease)
-    background-size: 100%!important
-    background-position: top!important
-    background-attachment: fixed!important
-    margin-top: 150px
+    background-size: 100%
+    background-position: center center
+    margin-top: $header-margin-top
     height: 385px
+  @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
+    margin-top: 0!important
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+    margin-top: 0!important
 .page-title
   font-size: 350%
   font-weight: lighter
@@ -56,6 +56,8 @@ section#content
   padding: 12px 0
   margin-bottom: 2em
   border-bottom: 1px solid rgb(200,200,200)
+  // .current_page_item
+  //   display: none
   @media all and (max-width: $medium-break)
     text-align: center
   ul
@@ -92,6 +94,12 @@ section#content
     //   border-left: 6px solid lighten($secondary-color,20)!important
     a
       color: lighten($secondary-color,20)!important
+.sub-page-menu-parent
+  margin-right: 1em
+  border-right: 1px solid $muted-grey
+  padding-right: 1em
+  a
+    color: $secondary-color!important
 .widget_sp_image
   margin-bottom: 1em
   h3
