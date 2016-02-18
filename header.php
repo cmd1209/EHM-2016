@@ -7,6 +7,7 @@
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+				<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.min.css">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -32,6 +33,11 @@
 					<div class="header-child orderA ">
 						<nav class="nav language mobile-right">
 							<?php service_nav(); ?>
+							<div class="social">
+								<a href="#"><i class="fa fa-youtube"></i></a>
+								<a href="https://www.facebook.com/hansemuseum/timeline"><i class="fa fa-facebook-square"></i></a>
+								<a href="#"><i class="fa fa-twitter-square"></i></a>
+							</div>
 						</nav>
 					</div>
 					<div class="header-child orderB">

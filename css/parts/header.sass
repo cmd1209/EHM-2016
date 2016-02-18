@@ -65,14 +65,26 @@ header
   font-size: 0.9em
   color: $primary-color
 
-
 .language
   ul
     padding-left: 0!important
   li
     display: inline
+    margin: 0 2px
   a
     display: inline-block
+
+.social
+  a
+    vertical-align:middle
+    margin: 0 1px
+  i
+    color: white
+    font-size: 1.2em!important
+    color: darken($muted-grey, 30)
+    &:hover
+      color: $primary-color
+
 .logo
   width: 100%
   position: absolute
@@ -135,6 +147,12 @@ header
     color: $primary-color
 
 // Navigation Elements
+
+.facebook-like
+  width: 30px
+  margin: 0
+  padding: 0
+  display: block
 
 nav.slidedown
   margin: 0

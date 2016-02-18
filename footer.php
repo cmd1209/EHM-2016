@@ -37,9 +37,11 @@
 					</div>
 						</div>
 				</div>
-
 				<div class="row">
 					<div class="col col--12-of-12">
+						<div class="footer-logo">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+						</div>
 						<p class="copyright">
 							&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.
 						</p>
