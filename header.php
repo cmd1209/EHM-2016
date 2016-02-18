@@ -37,7 +37,11 @@
 								<a href="#"><i class="fa fa-youtube"></i></a>
 								<a href="https://www.facebook.com/hansemuseum/timeline"><i class="fa fa-facebook"></i></a>
 								<a href="#"><i class="fa fa-twitter"></i></a>
-								<a href="#"><i class="fa fa-envelope-o"></i></a>
+								<?php $currentlang = get_bloginfo('language'); if($currentlang=="de-DE"): ?>
+									<a href="<?php echo get_page_link(162); ?>"><i class="fa fa-envelope-o"></i></a>
+								<?php else: ?>
+									<a href="<?php echo get_page_link(185); ?>"><i class="fa fa-envelope-o"></i></a>
+								<?php endif; ?>
 							</div>
 						</nav>
 					</div>
