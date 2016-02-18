@@ -15,24 +15,18 @@
 						<div class="col col--9-of-12 col--m-1-of-2">
 							<div class="row">
 								<div class="col col--4-of-12 col--m-1-of-2">
-							<div class="footer-logo sponsor-logo">
 								<a href="<?php echo home_url(); ?>">
 									<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-									<img src="<?php echo get_template_directory_uri(); ?>/img/hansestadt.svg" alt="Logo" class="hansestadt-img">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/hansestadt.svg" alt="Logo" class="footer-logo">
 								</a>
 							</div>
-							</div>
 						<div class="col col--4-of-12 col--m-6-of-12">
-							<div class="footer-logo sponsor-logo">
 								<p class="footer-caption">Gefördert durch die:</p>
 								<img class="footer-logo" src="<?php $url = content_url(); echo $url; ?>/uploads/2015/01/possehl.png" alt="">
-							</div>
 						</div>
 						<div class="col col--4-of-12 col--m-6-of-12">
-							<div class="footer-logo sponsor-logo">
 								<p class="footer-caption">Gefördert durch die Europäische Union, Europäischer Fonds für regionale Entwicklung (EFRE),den Bund und das Land Schleswig-Holstein</p>
 								<img class="footer-logo" src="<?php $url = content_url(); echo $url; ?>/uploads/2015/01/zukunftsprogramm.png" alt="">
-							</div>
 						</div>
 					</div>
 						</div>
