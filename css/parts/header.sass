@@ -66,6 +66,7 @@ header
   color: $primary-color
 
 .language
+  text-align: center
   ul
     padding-left: 0!important
   li
@@ -73,17 +74,22 @@ header
     margin: 0 2px
   a
     display: inline-block
-
 .social
+  text-align: center
   a
     vertical-align:middle
-    margin: 0 1px
+    margin: 2px 0
   i
-    color: white
     color: darken($muted-grey, 30)
+    background-color: $muted-grey
+    border-radius: 50%
+    width: 25px
+    height: 25px
+    line-height: 25px
+    font-size: 0.95em
     &:hover
-      color: $primary-color
-
+      color: $muted-grey
+      background-color: $primary-color
 .logo
   width: 100%
   position: absolute
