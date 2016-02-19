@@ -13,7 +13,6 @@
   <div class="page-content row">
     <div class="wordpress-import col col--9-of-12">
       <h1 class="page-title"><?php the_title(); ?></h1>
-      <h3>hey this is the ausstellung test</h3>
       <nav class="sub-page-menu">
         <?php
         if($post->post_parent)
@@ -35,7 +34,7 @@
         <?php else: ?> <!-- don't display anything because it seems to grab the first paragraph -->
         <?php endif ?>
         <?php the_content(); ?>
-        <a href="#" class="rundgang-start">start</a>
+        <h2><a href="#" class="rundgang-start">start</a></h2>
         <div class="rundgang rundgang-hidden">
           <a href="#" class="rundgang-close"><i class="fa fa-times-circle "></i></a>
           <div class="owl-carousel">
