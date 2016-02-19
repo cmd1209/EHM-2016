@@ -1,8 +1,9 @@
+
 article
   padding: 1em 1em 1em 4px
   overflow: hidden
   @media all and (max-width: $medium-break)
-    padding: 1em
+    padding: 1em 4px
 .news-header
   color: white
   background-color: $primary-color
@@ -36,7 +37,10 @@ article
   height: 275px
   display: block
   background-size: cover!important
-  margin: 8px 0 8px -4px
+  margin: 8px 0 8px -1em
+  @media all and (max-width: $medium-break)
+    width: calc(100% + 8px)
+    margin: 8px 0 8px -4px
 .news-date
   text-align: right
   text-transform: uppercase
