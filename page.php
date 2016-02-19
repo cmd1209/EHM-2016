@@ -43,6 +43,6 @@
 <?php rewind_posts();?>
 <?php wp_reset_query();?>
 <br class="clear">
-<?php get_footer(); ?>
   </div>
+  <?php get_footer(); ?>
 </section>

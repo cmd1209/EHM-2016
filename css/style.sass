@@ -18,6 +18,7 @@ $vertical-header-break: 720px
 
 $header-margin: 6em
 $header-margin-top: 4em
+$vertical-keyvisual-margin: 326px
 
 @mixin transition($args...)
   -webkit-transition: $args
@@ -49,6 +50,10 @@ body
   @include transition(all 0.25s ease)
 
 aside
+  background-color: $muted-grey
+  margin-bottom: -9999px
+  padding: 0 0 9999px 0!important
+  overflow: hidden
   @media all and (max-width: $medium-break)
     padding-left: 0!important
 

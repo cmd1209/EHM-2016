@@ -1,10 +1,8 @@
 article
-  border-bottom: 1px solid darken($muted-grey,5)
-  padding: 4px 4px 16px 4px
+  padding: 1em 1em 1em 4px
   overflow: hidden
   @media all and (max-width: $medium-break)
     padding: 1em
-    border: none
 .news-header
   color: white
   background-color: $primary-color
@@ -19,7 +17,6 @@ article
   -moz-font-smoothing: antialiased
   -o-font-smoothing: antialiased
   color: $primary-color
-  background-color: $muted-grey
   h1, h2, h3, h4, h5, h6
     font-family: $sans
     margin: 0
@@ -35,12 +32,11 @@ article
   @media all and (max-width: $large-break)
     font-size: 1.5em
 .news-thumbnail
-  width: 100%
+  width: calc(100% + 2em)
   height: 275px
   display: block
   background-size: cover!important
-  border-radius: $base-border-radius
-  margin: 8px 0
+  margin: 8px 0 8px -4px
 .news-date
   text-align: right
   text-transform: uppercase
