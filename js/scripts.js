@@ -43,16 +43,16 @@
 		var overlay = $('.overlay');
 
 		rundgangstart.click(function() {
-  		rundgang.removeClass("rundgang-hidden");
-  		overlay.slideDown("slow");
+			overlay.fadeIn("fast");
+  		rundgang.delay(750).removeClass("rundgang-hidden");
 		});
 		rundgangclose.click(function() {
 			rundgang.addClass("rundgang-hidden");
-			overlay.slideUp("fast");
+			overlay.fadeOut("fast");
 		});
 		overlay.click(function() {
 			rundgang.addClass("rundgang-hidden");
-			overlay.slideUp("fast");
+			overlay.fadeOut("fast");
 		});
 
 });//ready func.

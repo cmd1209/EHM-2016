@@ -41,19 +41,13 @@
           <div class="owl-carousel">
             <div class="room">
               <div class="slide" style="background:url(<?php the_field("room1"); ?>)no-repeat center center;"></div>
+              <h2><?php the_field("room1name"); ?></h2>
               <h5><?php the_field("room1text"); ?></h5>
             </div>
             <div class="room">
               <div class="slide" style="background:url(<?php the_field("room2"); ?>)no-repeat center center;"></div>
+              <h2><?php the_field("room2name"); ?></h2>
               <h5><?php the_field("room2text"); ?></h5>
-            </div>
-            <div class="room">
-              <div class="slide" style="background:url(<?php the_field("room3"); ?>)no-repeat center center;"></div>
-              <h5><?php the_field("room3text"); ?></h5>
-            </div>
-            <div class="room">
-              <div class="slide" style="background:url(<?php the_field("room4"); ?>)no-repeat center center;"></div>
-              <h5><?php the_field("room4text"); ?></h5>
             </div>
           </div>
         </div>
