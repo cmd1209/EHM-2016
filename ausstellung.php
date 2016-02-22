@@ -34,7 +34,7 @@
         <?php else: ?> <!-- don't display anything because it seems to grab the first paragraph -->
         <?php endif ?>
         <?php the_content(); ?>
-        <h2><a href="#" class="rundgang-start">start</a></h2>
+        <a href="#" class="rundgang-start"><i class="fa fa-play-circle"></i></br>Start</a>
         <div class="rundgang rundgang-hidden">
           <a href="#" class="rundgang-close"><i class="fa fa-times"></i></a>
           <div class="owl-carousel">
@@ -47,6 +47,31 @@
               <div class="slide" style="background:url(<?php the_field("room2"); ?>)no-repeat center center;"></div>
               <h2><?php the_field("room2name"); ?></h2>
               <h5><?php the_field("room2text"); ?></h5>
+            </div>
+            <div class="room">
+              <div class="slide" style="background:url(<?php the_field("room3"); ?>)no-repeat center center;"></div>
+              <h2><?php the_field("room3name"); ?></h2>
+              <h5><?php the_field("room3text"); ?></h5>
+            </div>
+            <div class="room">
+              <div class="slide" style="background:url(<?php the_field("room4"); ?>)no-repeat center center;"></div>
+              <h2><?php the_field("room4name"); ?></h2>
+              <h5><?php the_field("room4text"); ?></h5>
+            </div>
+            <div class="room">
+              <div class="slide" style="background:url(<?php the_field("room5"); ?>)no-repeat center center;"></div>
+              <h2><?php the_field("room5name"); ?></h2>
+              <h5><?php the_field("room5text"); ?></h5>
+            </div>
+            <div class="room">
+              <div class="slide" style="background:url(<?php the_field("room6"); ?>)no-repeat center center;"></div>
+              <h2><?php the_field("room6name"); ?></h2>
+              <h5><?php the_field("room6text"); ?></h5>
+            </div>
+            <div class="room">
+              <div class="slide" style="background:url(<?php the_field("room7"); ?>)no-repeat center center;"></div>
+              <h2><?php the_field("room7name"); ?></h2>
+              <h5><?php the_field("room7text"); ?></h5>
             </div>
           </div>
         </div>

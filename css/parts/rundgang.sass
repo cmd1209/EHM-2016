@@ -13,15 +13,16 @@
 .rundgang
   opacity: 1
   position: fixed
-  width: 75%
+  width: 82%
   overflow: visible
   top: 100px
   left: 50%
   @include transform(translateX(-50%))
   z-index: 998
-  @include transition(all 0.25s ease)
+  @include transition(all 0.3s ease-out)
   @media all and (max-width: $medium-break)
     top: 25px
+    width: 95%
 
 .room
   position: static
@@ -62,8 +63,17 @@
   &:hover
     color: $primary-color!important
 
+.rundgang-start
+  text-align: center!important
+  display: block
+  font-size: 2em
+  color: $primary-color
+  &:hover
+    color: $secondary-color
+  i
+    font-size: 3em
 
 .rundgang-hidden
-  @include transition(all 0.25s ease)
+  @include transition(all 0.3s ease-out)
   opacity: 0
   top: -2000px
