@@ -36,7 +36,7 @@
         <?php the_content(); ?>
         <h2><a href="#" class="rundgang-start">start</a></h2>
         <div class="rundgang rundgang-hidden">
-          <a href="#" class="rundgang-close"><i class="fa fa-times-circle "></i></a>
+          <a href="#" class="rundgang-close"><i class="fa fa-times"></i></a>
           <div class="owl-carousel">
             <div class="room">
               <div class="slide" style="background:url(<?php the_field("room1"); ?>)no-repeat center center;"></div>
