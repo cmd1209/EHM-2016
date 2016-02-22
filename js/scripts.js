@@ -9,12 +9,17 @@
 		var slidewidth = $('.slidedown').width();
 		var slidedown = $( '.slidedown' );
 		var stage = $('.stage');
+		var activatoricon = $('.menu-activator').find('i');
 
 		$(".menu-activator").toggle(
   function() {
+		activatoricon.removeClass("fa-bars");
+		activatoricon.addClass("fa-arrow-left");
     slidedown.addClass( "active" );
 		stage.css("margin-left", slidewidth);
   }, function() {
+		activatoricon.removeClass("fa-arrow-left");
+		activatoricon.addClass("fa-bars");
     slidedown.removeClass( "active" );
 		stage.css("margin-left", "0");
   }

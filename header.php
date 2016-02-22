@@ -54,6 +54,6 @@
 						</div>
 					</div>
 					<div class="header-child orderC">
-						<a href="javascript:void(0);" class="menu-activator">&#9776;</a>
+						<a href="#" class="menu-activator"><i class="fa fa-bars"></i></a>
 					</div>
 			</header>
