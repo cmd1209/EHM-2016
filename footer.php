@@ -1,5 +1,12 @@
 			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+<?php if (is_home()): ?>
+
+	<footer class="footer no-margin" role="contentinfo">
+	<?php else: ?>
+
+		<footer class="footer" role="contentinfo">
+<?php endif; ?>
+
 				<div class="row">
 					<div class="col col--3-of-12 col--m-1-of-2">
 						<?php get_template_part('searchform'); ?>

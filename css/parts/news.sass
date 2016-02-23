@@ -3,6 +3,9 @@ article
   padding: 1em 1em 1em 4px
   overflow: hidden
   border-bottom: 1px solid $muted-grey
+  margin-top: 1em
+  &:first-of-type
+    margin-top: 0
   &:last-of-type
     border-bottom: none
   @media all and (max-width: $medium-break)
@@ -46,8 +49,12 @@ article
   text-align: left
   text-transform: uppercase
   font-size: 1.125em
-  padding: 4px
-  color: $secondary-color
+  background-color: $muted-grey
+  color: $primary-color
+  padding: 0 4px
+.news-date-sidebar
+  background-color: darken($muted-grey,10)
+  color: $primary-color
 .news-page-date
   text-align: left
   font-size: 1em
