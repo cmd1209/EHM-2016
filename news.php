@@ -44,7 +44,7 @@
   <?php // the query
 	$args = array('post_type' => 'post');
 	$the_query = new WP_Query( $args ); ?>
-  <div class="page-content row">
+  <div class="page-content row news">
     <div class="col col--4-of-12">
       <?php $i = 0; if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();  if ($i % 3 == 0): ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

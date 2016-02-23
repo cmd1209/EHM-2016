@@ -1,12 +1,7 @@
 <div class="news">
 	<h1 class="news-header">News</h1>
-	<?php // the query
-	$args = array('post_type' => 'post');
-	$the_query = new WP_Query( $args ); ?>
 	<div class="row">
-
-	<?php if ( $the_query->have_posts() ) : ?>
-		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 			<div class="col col--12-of-12 col--m-1-of-2">
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -25,5 +20,4 @@
 <?php endwhile; ?>
 <?php endif; ?>
 	</div>
-	  <?php wp_reset_postdata(); ?>
 </div>
