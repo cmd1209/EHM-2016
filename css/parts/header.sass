@@ -65,7 +65,7 @@ header
   font-size: 0.9em
   color: $primary-color
 
-.language
+.language, .social
   text-align: center
   ul
     padding-left: 0!important
@@ -74,9 +74,6 @@ header
     margin: 0 2px
   a
     display: inline-block
-.social
-  text-align: center
-  a
     vertical-align:middle
     margin: 2px 0
   i
@@ -90,6 +87,19 @@ header
     &:hover
       color: $muted-grey
       background-color: $primary-color
+.lang-item-de, .lang-item-en
+  a
+    background-color: $muted-grey
+    border-radius: 50%
+    width: 25px
+    height: 25px
+    @include filter(grayscale(100%))
+    &:hover
+      @include filter(grayscale(0%))
+      background-color: $primary-color
+    img
+      width: 60%
+      height: auto
 .logo
   width: 100%
   position: absolute
