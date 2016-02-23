@@ -63,15 +63,37 @@
   &:hover
     color: $primary-color!important
 
+.rundgang-preview
+  background-size: cover!important
+  width: 100%
+  height: 450px
+  background-color: grey
+  position: relative
+
 .rundgang-start
-  text-align: center!important
-  display: block
-  font-size: 2em
-  color: $primary-color
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  @include transition(all 0.5s ease-out)
+  background-color: rgba($muted-grey,0.90)
   &:hover
-    color: $secondary-color
-  i
-    font-size: 3em
+    @include transition(all 0.5s ease-out)
+    background-color: rgba($muted-grey,0.25)
+
+i.rundgang-button
+  cursor: pointer
+  pointer-events: none
+  position: absolute
+  left: 50%
+  top: 50%
+  font-size: 7em
+  color: $primary-color
+  @include transform(translateX(-50%)translateY(-50%))
+
 
 .rundgang-hidden
   @include transition(all 0.3s ease-out)

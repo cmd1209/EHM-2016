@@ -34,7 +34,11 @@
         <?php else: ?> <!-- don't display anything because it seems to grab the first paragraph -->
         <?php endif ?>
         <?php the_content(); ?>
-        <a href="#" class="rundgang-start"><i class="fa fa-play-circle"></i></br>Start</a>
+        <?php $besuchImage = wp_get_attachment_url( get_post_thumbnail_id(297) ); ?>
+        <div class="rundgang-preview" style="background:url(<?php echo $besuchImage; ?>)center center;">
+          <a href="#" class="rundgang-start"></a>
+          <i class="fa fa-play-circle rundgang-button"></i>
+        </div>
         <div class="rundgang rundgang-hidden">
           <a href="#" class="rundgang-close"><i class="fa fa-times"></i></a>
           <div class="owl-carousel">
