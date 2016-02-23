@@ -32,7 +32,12 @@
 			paginationSpeed : 800,
 			goToFirstSpeed : 3500,
 			singleItem : true,
+			transitionStyle : "fade"
 		});
+
+		var owl = $(".owl-carousel").data('owlCarousel');
+		owl.stop();
+
 		var introrollover = $(".intro-key");
 
 		introrollover.mouseenter(function() {
@@ -50,12 +55,15 @@
 		rundgangstart.click(function() {
 			overlay.fadeIn("fast");
   		rundgang.delay(750).removeClass("rundgang-hidden");
+			owl.play();
 		});
 		rundgangclose.click(function() {
+			owl.stop();
 			rundgang.addClass("rundgang-hidden");
 			overlay.fadeOut("fast");
 		});
 		overlay.click(function() {
+			owl.stop();
 			rundgang.addClass("rundgang-hidden");
 			overlay.fadeOut("fast");
 		});

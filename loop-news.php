@@ -10,10 +10,9 @@
 				<div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-thumbnail"></div>
 			<?php else: ?>
 			<?php endif; ?>
-					<h3 class="news-title"><?php the_title(); ?></h3>
+					<h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<span class="news-date news-date-sidebar"><?php the_date( 'd/m/Y' ); ?> </span>
 					<p class="news-text"><?php the_excerpt(); ?></p>
-					<a href="<?php the_permalink(); ?>" class="news-link">mehr lesen</a>
 					<br class="clear">
 		</article>
 	</div>

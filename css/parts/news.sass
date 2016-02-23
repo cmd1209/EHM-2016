@@ -1,6 +1,6 @@
 
 article
-  padding: 1em 1em 1em 4px
+  padding: 1em 1em 0 4px
   overflow: hidden
   border-bottom: 1px solid $muted-grey
   margin-top: 1em
@@ -32,6 +32,10 @@ article
     margin-bottom: 0.5em
 .news-title
   font-size: 1.4em
+  a
+    color: $primary-color
+    &:hover
+      color: $secondary-color
   @media all and (max-width: $large-break)
     font-size: 1.5em
 .news-thumbnail
