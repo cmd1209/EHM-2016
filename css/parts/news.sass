@@ -2,6 +2,9 @@
 article
   padding: 1em 1em 1em 4px
   overflow: hidden
+  border-bottom: 1px solid $muted-grey
+  &:last-of-type
+    border-bottom: none
   @media all and (max-width: $medium-break)
     padding: 1em 4px
 .news-header
@@ -41,12 +44,18 @@ article
   @media all and (max-width: $medium-break)
     width: calc(100% + 8px)
     margin: 8px 0 8px -4px
+.thumbnail-tall
+  height: 400px
 .news-date
-  text-align: right
+  text-align: left
   text-transform: uppercase
   font-size: 1.125em
   padding: 4px
   color: $secondary-color
+.news-page-date
+  text-align: left
+  font-size: 1em
+  padding: 4px 0
 .news-link
   color: $link-color
   text-decoration: none
@@ -55,6 +64,8 @@ article
   display: block
   &:hover
     color: $primary-color
+.news-link-left
+  float: left
 .left
   position: relative
   width: 20%
