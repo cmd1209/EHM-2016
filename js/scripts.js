@@ -25,7 +25,6 @@
   }
 );
 
-
 		$(".owl-carousel").owlCarousel({
 			autoPlay : 10000,
 			navigation: false,
@@ -36,7 +35,6 @@
 		});
 
 		var owl = $(".owl-carousel").data('owlCarousel');
-		owl.stop();
 
 		var introrollover = $(".intro-key");
 
@@ -52,9 +50,11 @@
 		var rundgangclose = $('.rundgang-close');
 		var overlay = $('.overlay');
 
+
 		rundgangstart.click(function() {
 			overlay.fadeIn("fast");
   		rundgang.delay(750).removeClass("rundgang-hidden");
+			owl.jumpTo(0)
 			owl.play();
 		});
 		rundgangclose.click(function() {
