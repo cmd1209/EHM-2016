@@ -1,10 +1,10 @@
 @include keyframes(MOVE-BG)
   0%
-    background-position: 25% center
+    background-position: 0% center
   50%
-    background-position: 65% center
+    background-position: 100% center
   100%
-    background-position: 25% center
+    background-position: 0% center
 section#content
   margin-left: $header-margin
   @media all and (max-width: $medium-break)
@@ -23,6 +23,8 @@ section#content
     padding: 0 1em 0 1em
     @include transition(all 0.5s ease)
     margin-left: 0
+  p
+    font-size: 1.1em
 .page-hero
   background-size: cover!important
   height: 100vh
@@ -64,15 +66,8 @@ section#content
     display: inline
     font-size: 1em
     font-family: $headline-font
-    margin-right: 0.5em
+    margin-right: 12px
     white-space: nowrap
-    // &:after
-    //   margin: 0 8px 0 4px
-    //   content: ""
-    //   display: inline-block
-    //   border-top: 6px solid transparent
-    //   border-bottom: 6px solid transparent
-    //   border-left: 6px solid $primary-color
     a
       color: $primary-color
       text-decoration: none
