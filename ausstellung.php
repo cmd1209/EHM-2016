@@ -36,10 +36,18 @@
         <?php the_content(); ?>
         <?php $besuchImage = wp_get_attachment_url( get_post_thumbnail_id(297) ); ?>
         <div class="rundgang-preview" style="background:url(<?php echo $besuchImage; ?>)center center;">
-          <a href="#" class="rundgang-start"></a>
+          <a href="#" id="teil1start" class="rundgang-start"></a>
           <i class="fa fa-play-circle rundgang-button"></i>
         </div>
-        <div class="rundgang rundgang-hidden">
+        <div class="burgkloster-text">
+          <?php the_field("teil2intro") ?>
+        </div>
+        <?php $researchImage = wp_get_attachment_url( get_post_thumbnail_id(454) ); ?>
+        <div class="rundgang-preview" style="background:url(<?php echo $researchImage; ?>)center center;">
+          <a href="#" id="teil2start" class="rundgang-start"></a>
+          <i class="fa fa-play-circle rundgang-button"></i>
+        </div>
+        <div  id="teil1" class="rundgang rundgang-hidden">
           <a href="#" class="rundgang-close"><i class="fa fa-times"></i></a>
           <div class="owl-carousel">
             <div class="room">
@@ -76,6 +84,26 @@
               <div class="slide" style="background:url(<?php the_field("room7"); ?>)no-repeat center center;"></div>
               <h2><?php the_field("room7name"); ?></h2>
               <h5><?php the_field("room7text"); ?></h5>
+            </div>
+          </div>
+        </div>
+        <div  id="teil2" class="rundgang rundgang-hidden">
+          <a href="#" class="rundgang-close"><i class="fa fa-times"></i></a>
+          <div class="owl-carousel">
+            <div class="room">
+              <div class="slide" style="background:url(<?php the_field("burg1"); ?>)no-repeat center center;"></div>
+              <h2><?php the_field("burg1name"); ?></h2>
+              <h5><?php the_field("burg1text"); ?></h5>
+            </div>
+            <div class="room">
+              <div class="slide" style="background:url(<?php the_field("burg2"); ?>)no-repeat center center;"></div>
+              <h2><?php the_field("burg2name"); ?></h2>
+              <h5><?php the_field("burg2text"); ?></h5>
+            </div>
+            <div class="room">
+              <div class="slide" style="background:url(<?php the_field("burg3"); ?>)no-repeat center center;"></div>
+              <h2><?php the_field("burg3name"); ?></h2>
+              <h5><?php the_field("burg3text"); ?></h5>
             </div>
           </div>
         </div>

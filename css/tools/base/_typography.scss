@@ -75,7 +75,9 @@ blockquote {
   font-size: 1.2em;
   line-height: 1.5em;
   margin: $base-line-height 0;
-  padding-left: $base-line-height / 2;
+  border-top: 1px solid $muted-grey;
+  border-bottom: 1px solid $muted-grey;
+  padding: 1em 0 0.15em 2em
 }
 
 cite {

@@ -45,26 +45,45 @@
   		$(this).find(".intro-link").removeClass("intro-link-active");
 		});
 
-		var rundgang = $('.rundgang');
-		var rundgangstart = $('.rundgang-start');
+		var teil1 = $('#teil1');
+		var teil2 = $('#teil2');
+		var teil1start = $('#teil1start');
+		var teil2start = $('#teil2start');
 		var rundgangclose = $('.rundgang-close');
 		var overlay = $('.overlay');
 
 
-		rundgangstart.click(function() {
+		teil1start.click(function() {
 			overlay.fadeIn("fast");
-  		rundgang.delay(750).removeClass("rundgang-hidden");
+  		teil1.delay(750).removeClass("rundgang-hidden");
 			owl.jumpTo(0)
 			owl.play();
 		});
 		rundgangclose.click(function() {
 			owl.stop();
-			rundgang.addClass("rundgang-hidden");
+			teil1.addClass("rundgang-hidden");
 			overlay.fadeOut("fast");
 		});
 		overlay.click(function() {
 			owl.stop();
-			rundgang.addClass("rundgang-hidden");
+			teil1.addClass("rundgang-hidden");
+			overlay.fadeOut("fast");
+		});
+
+		teil2start.click(function() {
+			overlay.fadeIn("fast");
+  		teil2.delay(750).removeClass("rundgang-hidden");
+			owl.jumpTo(0)
+			owl.play();
+		});
+		rundgangclose.click(function() {
+			owl.stop();
+			teil2.addClass("rundgang-hidden");
+			overlay.fadeOut("fast");
+		});
+		overlay.click(function() {
+			owl.stop();
+			teil2.addClass("rundgang-hidden");
 			overlay.fadeOut("fast");
 		});
 
