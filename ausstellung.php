@@ -34,19 +34,6 @@
         <?php else: ?> <!-- don't display anything because it seems to grab the first paragraph -->
         <?php endif ?>
         <?php the_content(); ?>
-        <?php $besuchImage = wp_get_attachment_url( get_post_thumbnail_id(297) ); ?>
-        <div class="rundgang-preview" style="background:url(<?php echo $besuchImage; ?>)center center;">
-          <a href="#" id="teil1start" class="rundgang-start"></a>
-          <i class="fa fa-play-circle rundgang-button"></i>
-        </div>
-        <div class="burgkloster-text">
-          <?php the_field("teil2intro") ?>
-        </div>
-        <?php $researchImage = wp_get_attachment_url( get_post_thumbnail_id(454) ); ?>
-        <div class="rundgang-preview" style="background:url(<?php echo $researchImage; ?>)center center;">
-          <a href="#" id="teil2start" class="rundgang-start"></a>
-          <i class="fa fa-play-circle rundgang-button"></i>
-        </div>
         <div  id="teil1" class="rundgang rundgang-hidden">
           <a href="#" class="rundgang-close"><i class="fa fa-times"></i></a>
           <div class="owl-carousel">
