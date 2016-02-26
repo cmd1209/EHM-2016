@@ -11,8 +11,10 @@ header
   padding: 4px
   min-height: 100vh
   top: 0
+  left: 0
   bottom: 0
   position: fixed
+  @include transition(all 0.25s ease)
   @media all and (max-width: $medium-break)
     @include flex-direction(row)
     @include transition(all 0.25s ease)
@@ -56,10 +58,13 @@ header
   position: fixed
   top: 0
   bottom: 0
+  left: $header-margin
   width: 325px
+  @include transition(all 0.25s ease)
   @media all and (max-width: $medium-break)
     position: relative
     width: 100%
+    left: 0
 
 .opening-hours
   font-size: 0.9em
