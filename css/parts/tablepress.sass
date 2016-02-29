@@ -76,11 +76,15 @@ table#wp-calendar, .eo_fullcalendar > table
       background-color: $primary-color
       left: 0
       top: 0
-      padding: 4px
+      padding: 8px
       z-index: 999
+      display: block
+      @include transform(translateX(-50%)translateY(-50%))
   td.today
     color: white
     background-color: $secondary-color
+  td.eo-event-future
+    background-color: $muted-grey
   td.eo-past-date
     color: $muted-grey
   thead
