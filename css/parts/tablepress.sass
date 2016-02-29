@@ -2,7 +2,6 @@ table.tablepress
   margin-top: 8px
   color: $primary-color
   font-size: 18px
-  border: 4px solid $muted-grey!important
   h2
     color: $primary-color
     margin: 0
@@ -12,17 +11,25 @@ table.tablepress
   table-layout: auto
   thead
     th
+      border-bottom: 4px solid white
+    .column-1
       background-color: $muted-grey
-      border: none
+    .column-2
+      background-color: $muted-grey
+    .column-3
+      background-color: lighten($muted-grey,8)
+      border-left: 8px solid white
   tbody
     background-color: $muted-grey
     tr
-      border-bottom: 4px solid $muted-grey
-      .column-1, .column-2
-        background-color: white
+      border-bottom: 4px solid white
+      .column-1
+        background-color: lighten($muted-grey,2)
+      .column-2
+        background-color: $muted-grey
       .column-3
-        background-color: lighten($muted-grey,10)
-        border-left: 4px solid $muted-grey
+        background-color: lighten($muted-grey,8)
+        border-left: 8px solid white
     td
       border: none
   .column-1
