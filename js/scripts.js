@@ -19,15 +19,17 @@
 		activatoricon.addClass("fa-arrow-left");
     slidedown.addClass( "active" );
 		header.css("margin-left", slidewidth);
-		pagethumbnail.css("margin-left", slidewidth);
 		stage.css("margin-left", slidewidth);
+		if (stage.width() > 960 ){
+			pagethumbnail.css("margin-left", slidewidth);
+       }
   }, function() {
 		activatoricon.removeClass("fa-arrow-left");
 		activatoricon.addClass("fa-bars");
     slidedown.removeClass( "active" );
 		header.css("margin-left", "0");
-		pagethumbnail.css("margin-left", "0");
 		stage.css("margin-left", "0");
+		pagethumbnail.css("margin-left", "0");
   }
 );
 
