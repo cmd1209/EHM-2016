@@ -79,9 +79,7 @@
             <?php  endif; $i++; ?>
             <?php endwhile; endif; ?>
           </div>
-
       </div>
-
     <aside class="sidebar col col--3-of-12" role="complementary">
       <?php get_sidebar(); ?>
     </aside>
