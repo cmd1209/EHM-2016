@@ -2,12 +2,10 @@ header
   box-sizing: border-box
   min-width: $header-margin
   width: $header-margin
-  background-color: white
   box-sizing: border-box
   @include display(flex)
   @include justify-content(space-between)
   @include flex-direction(column)
-  background-color: white
   padding: 4px
   min-height: 100vh
   top: 0
@@ -22,16 +20,17 @@ header
     height: $header-margin-top
     width: 100%
     min-width: 100%
-    overflow: hidden
+    overflow: visible
     z-index: 50
+    position: relative
   @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
     min-height: $header-margin-top
     height: $header-margin-top
-    position: absolute
+    position: relative
   @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
     min-height: $header-margin-top
     height: $header-margin-top
-    position: absolute
+    position: relative
 
 .header-sticky
   @include transition(all 0.25s ease)
