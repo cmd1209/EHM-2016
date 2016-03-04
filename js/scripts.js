@@ -15,17 +15,22 @@
 
 		$(".menu-activator").toggle(
   function() {
+		if (stage.width() > 960 ){
+			pagethumbnail.css("margin-left", slidewidth);
+			header.css("margin-left", slidewidth);
+		}
 		activatoricon.removeClass("fa-bars");
 		activatoricon.addClass("fa-arrow-left");
     slidedown.addClass( "active" );
+		if (stage.width() < 960 ){
+			header.css("margin-left", "0");
+		}
 		stage.css("margin-left", slidewidth);
-		if (stage.width() > 960 ){
-			pagethumbnail.css("margin-left", slidewidth);
-       }
   }, function() {
 		activatoricon.removeClass("fa-arrow-left");
 		activatoricon.addClass("fa-bars");
     slidedown.removeClass( "active" );
+		header.css("margin-left", "0");
 		stage.css("margin-left", "0");
 		pagethumbnail.css("margin-left", "0");
   }
