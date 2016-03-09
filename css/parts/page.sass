@@ -5,12 +5,16 @@
     background-position: 100% center
   100%
     background-position: 0% center
+section#startcontent
+  margin-left: $header-margin-start
+  @media all and (max-width: $medium-break)
+    margin-left: 0
 section#content
   margin-left: $header-margin
   @media all and (max-width: $medium-break)
     margin-left: 0
 .wordpress-import
-  padding-right: 10px
+  padding: 1.5em
   @media all and (max-width: $medium-break)
     padding: 0
 .top-row
@@ -26,7 +30,7 @@ section#content
 .page-hero
   background-size: cover!important
   height: 100vh
-  @include animation(MOVE-BG 60s ease-in-out infinite)
+  // @include animation(MOVE-BG 60s ease-in-out infinite)
   @media all and (max-width: $medium-break)
     @include transition(all 0.5s ease)
     background-size: 100%

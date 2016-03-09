@@ -32,6 +32,31 @@ header
     height: $header-margin-top
     position: relative
 
+header.extrawide
+  @extend header
+  min-width: $header-margin-start
+  width: $header-margin-start
+  padding: 1em
+  @media all and (max-width: $medium-break)
+    @include flex-direction(row)
+    @include transition(all 0.25s ease)
+    min-height: $header-margin-top
+    height: $header-margin-top
+    width: 100%
+    min-width: 100%
+    overflow: visible
+    z-index: 50
+    position: relative
+  @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait)
+    min-height: $header-margin-top
+    height: $header-margin-top
+    position: relative
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+    min-height: $header-margin-top
+    height: $header-margin-top
+    position: relative
+
+
 .header-sticky
   @include transition(all 0.25s ease)
   min-height: 45px
@@ -78,7 +103,7 @@ header
     margin: 0 1px
   a
     display: inline-block
-    vertical-align:middle
+    vertical-align: middle
     margin: 1px 0
   i
     color: darken($muted-grey, 30)

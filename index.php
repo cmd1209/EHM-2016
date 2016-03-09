@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section id="content">
+<section id="startcontent">
 <?php $currentlang = get_bloginfo('language'); if($currentlang=="de-DE"): ?>
   <div class="flex-container">
     <div class="flex-child">

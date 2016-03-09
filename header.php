@@ -29,7 +29,15 @@
 				<?php html5blank_nav(); ?>
 			</nav>
 		<div class="wrapper stage">
-			<header>
+
+
+			<?php if(is_home() ): ?>
+				<header class="extrawide">
+			<?php else: ?>
+				<header>
+			<?php endif; ?>
+
+
 					<div class="header-child orderA ">
 						<nav class="nav language mobile-right">
 							<?php service_nav(); ?>
