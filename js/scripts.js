@@ -57,11 +57,14 @@
 		});
 
 		var teil1 = $('#teil1');
+		var searchactivator = $('.fa-search');
+		var searchfield = $('.searchwrapper');
 		var teil2 = $('#teil2');
 		var teil1start = $('#teil1start');
 		var teil2start = $('#teil2start');
 		var rundgangclose = $('.rundgang-close');
 		var overlay = $('.overlay');
+		var startcontent = $('#startcontent');
 
 
 		teil1start.click(function() {
@@ -97,6 +100,19 @@
 			teil2.addClass("rundgang-hidden");
 			overlay.fadeOut("fast");
 		});
+
+		searchactivator.toggle(function() {
+			searchfield.fadeIn("fast");
+			header.css("margin-top", '56px');
+			pagethumbnail.css("margin-top", '56px');
+			startcontent.css("margin-top", '60px');
+		}, function () {
+			searchfield.fadeOut("fast");
+			header.css("margin-top", 0);
+			pagethumbnail.css("margin-top", 0);
+			startcontent.css("margin-top", 0);
+		});
+
 
 });//ready func.
 

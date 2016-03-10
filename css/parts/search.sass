@@ -1,15 +1,27 @@
-form.search
-  margin-top: 8px
-  vertical-align: middle
-  background-color: $base-text-color
-  position: relative
-  padding-right: 8px
-  width: 90%
+.searchwrapper
+  box-sizing: border-box
+  display: none
+  width: 438px
+  position: fixed
+  top: 0
+  padding: 1em
+  overflow: hidden
+  height: 90px
   @media all and (max-width: $medium-break)
-    width: 85%
+    width: 100%
+    top: -60px
+    position: absolute
+
+form.search
+  width: 100%
+  vertical-align: middle
+  position: relative
 input.search-input
+  display: inline-block
+  width: 91%
   border: none
-  background-color: $base-text-color
+  border-radius: 0 12.5px 12.5px 0
+  background-color: $muted-grey
   height: 1.7em
   padding: 2px 5px
   color: $primary-color
@@ -17,16 +29,18 @@ input.search-input
     outline: none
     box-shadow: none
 button.search-submit
-  position: absolute
-  top: 0
-  right: 0
-  height: 100%
-  width: auto
+  height: 30px!important
+  width: 30px!important
+  border-radius: 50%
+  text-align: center
   border: none
-  padding: 6px 8px 6px 8px
-  background-color: $base-text-color
-  &:hover
-    background-color: darken($base-text-color, 20)
-  img
-    height: 100%!important
-    width: auto!important
+  background-color: $muted-grey
+  padding: 0
+  i
+    color: darken($muted-grey, 30)
+    border-radius: 50%
+    line-height: 25px
+    font-size: 0.95em
+    margin-top: -2px
+    &:hover
+      color: $primary-color
