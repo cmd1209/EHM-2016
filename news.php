@@ -44,13 +44,13 @@
   <?php // the query
 	$args = array('post_type' => 'post');
 	$the_query = new WP_Query( $args ); ?>
-  <div class="page-content row news">
+  <div class="page-content row news news-page">
     <div class="col col--4-of-12">
       <?php $i = 0; if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();  if ($i % 3 == 0): ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <?php if (has_post_thumbnail()): ?>
             <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
-            <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-thumbnail thumbnail-tall"></div>
+            <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-page-thumbnail thumbnail-tall"></div>
           <?php else: ?>
           <?php endif; ?>
           <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -66,7 +66,7 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <?php if (has_post_thumbnail()): ?>
             <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
-            <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-thumbnail thumbnail-tall"></div>
+            <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-page-thumbnail thumbnail-tall"></div>
           <?php else: ?>
           <?php endif; ?>
               <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -82,7 +82,7 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <?php if (has_post_thumbnail()): ?>
             <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
-            <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-thumbnail thumbnail-tall"></div>
+            <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-page-thumbnail thumbnail-tall"></div>
           <?php else: ?>
           <?php endif; ?>
               <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
