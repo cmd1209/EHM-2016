@@ -57,7 +57,7 @@
 		});
 
 		var teil1 = $('#teil1');
-		var searchactivator = $('.fa-search');
+		var searchactivator = $('.search-icon');
 		var searchfield = $('.searchwrapper');
 		var teil2 = $('#teil2');
 		var teil1start = $('#teil1start');
@@ -106,11 +106,13 @@
 			header.css("margin-top", '56px');
 			pagethumbnail.css("margin-top", '56px');
 			startcontent.css("margin-top", '60px');
+			searchactivator.addClass("fa-arrow-up");
 		}, function () {
 			searchfield.fadeOut("fast");
 			header.css("margin-top", 0);
 			pagethumbnail.css("margin-top", 0);
 			startcontent.css("margin-top", 0);
+			searchactivator.removeClass("fa-arrow-up");
 		});
 
 

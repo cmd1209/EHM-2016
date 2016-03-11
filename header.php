@@ -45,7 +45,7 @@
 						<nav class="nav language mobile-right">
 							<?php service_nav(); ?>
 							<div class="social">
-								<a href="#"><i class="fa fa-search"></i></a>
+								<a href="#"><i class="fa fa-search search-icon"></i></a>
 								<a href="https://www.facebook.com/hansemuseum/timeline"><i class="fa fa-facebook"></i></a>
 								<?php $currentlang = get_bloginfo('language'); if($currentlang=="de-DE"): ?>
 									<a href="<?php echo get_page_link(162); ?>"><i class="fa fa-envelope-o"></i></a>
