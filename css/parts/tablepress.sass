@@ -53,16 +53,16 @@ table.tablepress
 h2.tablepress-table-name
   @extend h4
   margin-bottom: 0
-
+  
 table#wp-calendar, .eo_fullcalendar > table
   margin-top: 0!important
-  background-color: $primary-color
+  background-color: $secondary-color
   color: $muted-grey
   font-size: 0.85em
   margin-left: -10px!important
   width: calc(100% + 18px)
   margin-bottom: 0px!important
-  border-bottom: 2px solid $muted-grey
+  border-bottom: solid 18px white
   a
     color: white
   caption
@@ -70,7 +70,7 @@ table#wp-calendar, .eo_fullcalendar > table
     color: white
     font-size: 24px
     text-align: center
-    background-color: $primary-color
+    background-color: $secondary-color
     padding-left: 10px
     // margin-left: -10px!important
     // width: calc(100% + 12px)
@@ -81,19 +81,19 @@ table#wp-calendar, .eo_fullcalendar > table
       padding: 16px
       text-align: center
   td
-    border: 2px solid $primary-color!important
+    border: 2px solid $secondary-color!important
     padding: 12px 4px!important
     text-align: center!important
     position: relative
   td.today
-    background-color: $secondary-color
-    color: white
+    background-color: $muted-grey
+    color: $primary-color
     font-weight: 600
   td.eo-past-date
     color: $muted-grey
-    background-color: darken($primary-color,3)
+    background-color: darken($secondary-color,3)
   td.eo-future-date
-    background-color: lighten($primary-color, 3)
+    background-color: lighten($secondary-color, 3)
   td.eo-event-future
     background-color: $primary-color
     &:hover

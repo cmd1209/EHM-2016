@@ -42,7 +42,13 @@
               <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-                <h3><?php printf(eo_get_the_start('d/m/Y')); ?></h3>
+                <h3>
+                  <?php if ($eo_get_the_start == $eo_get_the_end): ?>
+                    <?php printf(eo_get_the_start('d.m')); ?> - <?php printf(eo_get_the_end('d.m.Y')); ?>
+                  <?php else: ?>
+                    <?php printf(eo_get_the_start('d.m.Y')); ?>
+                  <?php endif; ?>
+                </h3>
                 <span class="news-date"><?php printf(eo_get_the_start("G:i")); ?> - <?php printf(eo_get_the_end("G:i")); ?></span>
 
 
@@ -63,7 +69,13 @@
               <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-                <h3><?php printf(eo_get_the_start('d/m/Y')); ?></h3>
+                <h3>
+                  <?php if ($eo_get_the_start == $eo_get_the_end): ?>
+                    <?php printf(eo_get_the_start('d.m.Y')); ?>
+                  <?php else: ?>
+                    <?php printf(eo_get_the_start('d.m')); ?> - <?php printf(eo_get_the_end('d.m.Y')); ?>
+                  <?php endif; ?>
+                </h3>
                 <span class="news-date"><?php printf(eo_get_the_start("G:i")); ?> - <?php printf(eo_get_the_end("G:i")); ?></span>
 
 
