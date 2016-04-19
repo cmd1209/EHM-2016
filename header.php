@@ -24,6 +24,14 @@
 
 	</head>
 	<body <?php body_class(); ?>>
+		<!-- <div class="cookie-jar">
+			<div class="cookie-box">
+				<p>
+					We use cookies to ensure the best experience on our website - by using this site or closing this message you're agreeing to our cookies policy.
+				</p>
+				<a href="#" class="button" id="cookie-accept">accept</a>
+			</div>
+		</div> -->
 		<!-- wrapper -->
 			<nav class="nav slidedown" role="navigation">
 				<?php html5blank_nav(); ?>

@@ -116,6 +116,28 @@
 		});
 
 
+		// $(function() {
+		//   if (! $.cookie('seen') && $('body').hasClass('home')){
+		//     $.cookie('seen', 'step1', { expires: 120, path: '/' });
+		//     console.log('home origin');
+		//   }
+		//   if ($.cookie('seen')==="step1" && $('body').hasClass('page')){
+		//     $.cookie('seen', 'step2', { expires: 120, path: '/' });
+		//     console.log('home > inner ');
+		//   }
+		//   if ($.cookie('seen')==="step2" && $('body').hasClass('home')){
+		//     $('.modal-container').addClass('is-open');
+		//     $('.fullbacking').addClass('is-down');
+		//     console.log('home > single > home');
+		//   }
+		//   $('.modal-container .close').click(function() {
+		//     $('.modal-container').removeClass('is-open');
+		//     $('.fullbacking').removeClass('is-down');
+		//     $.cookie('seen', 'complete', { expires: 120, path: '/' });
+		//   });
+		// });
+
+
 });//ready func.
 
 

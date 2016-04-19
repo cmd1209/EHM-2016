@@ -253,3 +253,13 @@ nav.slidedown
 .shoved
   @include transition(all 0.25s ease)
   margin-left: 250px
+
+.cookie-jar
+  position: fixed
+  top: 50%
+  left: 50%
+  background-color: rgba(white,0.95)
+  padding: 1em
+  z-index: 1001
+  @include transition(all 0.25s ease)
+  @include transform(translateX(-50%)translateY(-50%))
