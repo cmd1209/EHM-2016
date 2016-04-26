@@ -11,7 +11,7 @@
 			<?php else: ?>
 			<?php endif; ?>
 					<h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<span class="news-date news-date-sidebar"><?php the_date( 'd/m/Y' ); ?> </span>
+					<span class="news-date news-date-sidebar"><?php the_date( 'd. m. Y' ); ?> </span>
 					<p class="news-text"><?php the_excerpt(); ?></p>
 					<br class="clear">
 		</article>

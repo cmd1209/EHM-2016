@@ -129,6 +129,13 @@ header.extrawide
     img
       width: 60%
       height: auto
+.lang-item-en
+  a
+    opacity: 0.30
+    filter: alpha(opacity=30) /* For IE8 and earlier */
+    pointer-events: none
+    cursor: default
+
 .logo
   width: 100%
   position: absolute
@@ -233,7 +240,37 @@ nav.slidedown
     a
       padding-left: 32px
 
+
 // Jquery Classes
+
+.english-tooltip
+  background-color: $primary-color
+  position: absolute
+  padding: 2em
+  width: 350px
+  z-index: 1001
+  left: 9em
+  top: 0
+  display: none
+  @media all and (max-width: $medium-break)
+    left: 50%
+    @include transform(translateX(-50%))
+  h6
+    color: white
+  &::before
+    content: " "
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 13px 22.5px 13px 0
+    border-color: transparent $primary-color transparent transparent
+    position: absolute
+    left: 0
+    top: 1em
+    @include transform(translateX(-100%))
+    @media all and (max-width: $medium-break)
+      display: none
+
 
 .small-hidden
   @media all and (max-height: 650px)

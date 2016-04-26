@@ -21,6 +21,18 @@
             tests: {}
         });
         </script>
+				
+				<script>
+				  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				  ga('create', 'UA-10932812-6', 'hansemuseum.eu');
+				  ga('send', 'pageview');
+
+				</script>
+
 
 	</head>
 	<body <?php body_class(); ?>>
@@ -41,6 +53,11 @@
 				<?php get_template_part('searchform'); ?>
 			</div>
 
+			<div class="english-tooltip">
+				<h6>
+					We are working hard to bring our non-German speakers the best experience possible. Please visit us again shortly and we should have everything up-to-date.
+				</h6>
+			</div>
 
 			<?php if(is_home() ): ?>
 				<header class="extrawide">

@@ -34,71 +34,63 @@
         <?php else: ?> <!-- don't display anything because it seems to grab the first paragraph -->
         <?php endif ?>
         <?php the_content(); ?>
-        <?php // the query
-        $args = array('post_type' => 'event');
-        $the_query = new WP_Query( $args ); ?>
-          <div class="col col--6-of-12 news">
-            <?php $i = 0; if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();  if ($i % 2 == 0): ?>
-              <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <?php
+        $blogtime = date('Y');
+        $prev_limit_year = $blogtime - 1;
+        $prev_month = '';
+        $prev_year = '';
+        $args = array(
+          'post_type' => 'event',
+                 'posts_per_page' => 25,
+                 'ignore_sticky_posts' => 1
+        );
+        $postsbymonth = new WP_Query($args);
+
+        while($postsbymonth->have_posts()) {
+
+            $postsbymonth->the_post();
+
+            if(eo_get_the_start('F') != $prev_month || eo_get_the_start('Y') != $prev_year && eo_get_the_start('Y') == $prev_limit_year) {
+
+                           echo "<h2 class=\"col col--12-of-12 news-month\">".eo_get_the_start('F, Y')."</h2>\n\n";
+                }
+            ?>
+            <article id="post-<?php the_ID(); ?>" class="col col--6-of-12">
+              <?php if (has_post_thumbnail()): ?>
+                <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
+                <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-page-thumbnail thumbnail-tall"></div>
+              <?php else: ?>
+              <?php endif; ?>
+              <?php printf(eo_get_the_start('d. m. Y')); ?>
+              <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+              <p class="news-text"><?php the_excerpt(); ?></p>
+              <br class="clear">
+            </article>
+
+                        <?php // your other template tags ?>
 
 
-                <h3>
-                  <?php if ($eo_get_the_start == $eo_get_the_end): ?>
-                    <?php printf(eo_get_the_start('d.m')); ?> - <?php printf(eo_get_the_end('d.m.Y')); ?>
-                  <?php else: ?>
-                    <?php printf(eo_get_the_start('d.m.Y')); ?>
-                  <?php endif; ?>
-                </h3>
-                <span class="news-date"><?php printf(eo_get_the_start("G:i")); ?> - <?php printf(eo_get_the_end("G:i")); ?></span>
+            <?php
 
+            $prev_month = eo_get_the_start('F');
+            $prev_year = eo_get_the_start('Y');
 
-                <?php if (has_post_thumbnail()): ?>
-                  <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
-                  <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-thumbnail thumbnail-tall"></div>
-                <?php else: ?>
-                <?php endif; ?>
-                    <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    <p class="news-text"><?php the_excerpt(); ?></p>
-                    <br class="clear">
-              </article>
-            <?php  endif; $i++; ?>
-          <?php endwhile; endif; ?>
-          </div>
-          <div class="col col--6-of-12 news">
-            <?php $i = 0; if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();  if ($i % 2 == 1): ?>
-              <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        }
 
+                ?>
 
-                <h3>
-                  <?php if ($eo_get_the_start == $eo_get_the_end): ?>
-                    <?php printf(eo_get_the_start('d.m.Y')); ?>
-                  <?php else: ?>
-                    <?php printf(eo_get_the_start('d.m')); ?> - <?php printf(eo_get_the_end('d.m.Y')); ?>
-                  <?php endif; ?>
-                </h3>
-                <span class="news-date"><?php printf(eo_get_the_start("G:i")); ?> - <?php printf(eo_get_the_end("G:i")); ?></span>
-
-
-                <?php if (has_post_thumbnail()): ?>
-                  <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
-                  <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-thumbnail thumbnail-tall"></div>
-                <?php else: ?>
-                <?php endif; ?>
-                    <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                    <p class="news-text"><?php the_excerpt(); ?></p>
-                    <br class="clear">
-              </article>
-            <?php  endif; $i++; ?>
-            <?php endwhile; endif; ?>
-          </div>
       </div>
+
+
     <aside class="sidebar col col--3-of-12" role="complementary">
       <?php get_sidebar(); ?>
     </aside>
-  <?php endwhile; ?>
+
+<?php endwhile; ?>
 <?php endif; ?>
 <?php rewind_posts();?>
 <?php wp_reset_query();?>
+
 <br class="clear">
   </div>
   <?php get_footer(); ?>

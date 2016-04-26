@@ -41,59 +41,67 @@
 <?php wp_reset_query();?>
 <br class="clear">
   </div>
-  <?php // the query
-	$args = array('post_type' => 'post');
-	$the_query = new WP_Query( $args ); ?>
-  <div class="page-content row news news-page">
-    <div class="col col--4-of-12">
-      <?php $i = 0; if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();  if ($i % 3 == 0): ?>
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+  <div class="col col--12-of-12">
+
+    <?php // the query
+    $args = array('post_type' => 'event');
+    $the_query = new WP_Query( $args ); ?>
+    <div class="page-content row news news-page">
+      <?php
+
+      $blogtime = date('Y');
+      $prev_limit_year = $blogtime - 1;
+      $prev_month = '';
+      $prev_year = '';
+
+      $args = array(
+        'posts_per_page' => 25,
+        'ignore_sticky_posts' => 1
+      );
+
+      $postsbymonth = new WP_Query($args);
+
+      while($postsbymonth->have_posts()) {
+
+        $postsbymonth->the_post();
+
+        if(get_the_time('F') != $prev_month || get_the_time('Y') != $prev_year && get_the_time('Y') == $prev_limit_year) {
+
+          echo "<h2 class=\"col col--12-of-12 news-month\">".get_the_time('F, Y')."</h2>\n\n";
+
+        }
+
+        ?>
+
+        <article id="post-<?php the_ID(); ?>" class="col col--6-of-12">
           <?php if (has_post_thumbnail()): ?>
             <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
             <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-page-thumbnail thumbnail-tall"></div>
           <?php else: ?>
           <?php endif; ?>
+          <span class="news-date"><?php the_date( 'd. m. Y' ); ?> </span>
           <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-          <span class="news-date"><?php the_date( 'd/m/Y' ); ?> </span>
           <p class="news-text"><?php the_excerpt(); ?></p>
           <br class="clear">
         </article>
-      <?php  endif; $i++; ?>
-    <?php endwhile; endif; ?>
-    </div>
-    <div class="col col--4-of-12">
-      <?php $i = 0; if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();  if ($i % 3 == 1): ?>
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <?php if (has_post_thumbnail()): ?>
-            <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
-            <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-page-thumbnail thumbnail-tall"></div>
-          <?php else: ?>
-          <?php endif; ?>
-              <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-              <span class="news-date"><?php the_date( 'd/m/Y' ); ?> </span>
-              <p class="news-text"><?php the_excerpt(); ?></p>
-              <br class="clear">
-        </article>
-      <?php  endif; $i++; ?>
-      <?php endwhile; endif; ?>
-    </div>
-    <div class="col col--4-of-12">
-      <?php $i = 0; if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();  if ($i % 3 == 2): ?>
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <?php if (has_post_thumbnail()): ?>
-            <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
-            <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-page-thumbnail thumbnail-tall"></div>
-          <?php else: ?>
-          <?php endif; ?>
-              <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-              <span class="news-date"><?php the_date( 'd/m/Y' ); ?> </span>
-              <p class="news-text"><?php the_excerpt(); ?></p>
-              <br class="clear">
-        </article>
-      <?php  endif; $i++; ?>
-      <?php endwhile; endif; ?>
+
+        <?php // your other template tags ?>
+
+
+        <?php
+
+        $prev_month = get_the_time('F');
+        $prev_year = get_the_time('Y');
+
+      }
+
+      ?>
+
+
 
     </div>
+
   </div>
   <?php get_footer(); ?>
 </section>
