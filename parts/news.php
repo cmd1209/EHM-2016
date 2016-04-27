@@ -10,8 +10,7 @@
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="left">
 				<?php if (has_post_thumbnail()): ?>
-					<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'small' );?>
-					<div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-thumbnail"></div>
+					<?php echo get_the_post_thumbnail( $page->ID, 'small' ); ?>
 				<?php else: ?>
 				<?php endif; ?>
 			</div>

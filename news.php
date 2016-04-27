@@ -4,10 +4,10 @@
   <div class="page-thumbnail">
       <?php if (has_post_thumbnail() ): ?>
         <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-        <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>)no-repeat top center;"></div>
+        <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>)no-repeat center center;"></div>
       <?php else: ?>
         <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(252) ); ?>
-        <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>)no-repeat top center;"></div>
+        <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>)no-repeat center center;"></div>
       <?php endif ?>
   </div>
   <div class="page-content row">
@@ -68,16 +68,15 @@
 
         if(get_the_time('F') != $prev_month || get_the_time('Y') != $prev_year && get_the_time('Y') == $prev_limit_year) {
 
-          echo "<h2 class=\"col col--12-of-12 news-month\">".get_the_time('F, Y')."</h2>\n\n";
+          echo "<h2 class=\"news-month col col--12-of-12\">".get_the_time('F, Y')."</h2>\n\n";
 
         }
 
         ?>
 
-        <article id="post-<?php the_ID(); ?>" class="col col--6-of-12">
+        <article id="post-<?php the_ID(); ?>" class="col col--4-of-12">
           <?php if (has_post_thumbnail()): ?>
-            <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
-            <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-page-thumbnail thumbnail-tall"></div>
+            <?php echo get_the_post_thumbnail( $page->ID, 'large' ); ?>
           <?php else: ?>
           <?php endif; ?>
           <span class="news-date"><?php the_date( 'd. m. Y' ); ?> </span>

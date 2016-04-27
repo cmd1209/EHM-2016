@@ -4,10 +4,10 @@
   <div class="page-thumbnail">
       <?php if (has_post_thumbnail() ): ?>
         <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-        <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>)no-repeat top center;"></div>
+        <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>)no-repeat center center;"></div>
       <?php else: ?>
         <?php $featuredImage = wp_get_attachment_url( get_post_thumbnail_id(252) ); ?>
-        <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>)no-repeat top center;"></div>
+        <div class="page-hero" style="background:url(<?php echo $featuredImage; ?>)no-repeat center center;"></div>
       <?php endif ?>
   </div>
   <div class="page-content row">
@@ -56,13 +56,12 @@
                 }
             ?>
             <article id="post-<?php the_ID(); ?>" class="col col--6-of-12">
-              <?php if (has_post_thumbnail()): ?>
-                <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
-                <div style="background:url('<?php echo $thumb['0'];?>')no-repeat center center;" class="news-page-thumbnail thumbnail-tall"></div>
-              <?php else: ?>
-              <?php endif; ?>
               <?php printf(eo_get_the_start('d. m. Y')); ?>
               <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+              <?php if (has_post_thumbnail()): ?>
+                <?php echo get_the_post_thumbnail( $page->ID, 'small' ); ?>
+              <?php else: ?>
+              <?php endif; ?>
               <p class="news-text"><?php the_excerpt(); ?></p>
               <br class="clear">
             </article>
