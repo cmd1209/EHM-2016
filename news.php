@@ -79,7 +79,6 @@
             <?php echo get_the_post_thumbnail( $page->ID, 'large' ); ?>
           <?php else: ?>
           <?php endif; ?>
-          <span class="news-date"><?php the_date( 'd. m. Y' ); ?> </span>
           <h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
           <p class="news-text"><?php the_excerpt(); ?></p>
           <br class="clear">

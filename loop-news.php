@@ -5,8 +5,8 @@
 
 			<div class="col col--12-of-12 col--m-1-of-2">
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h3 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<span class="news-date news-date-sidebar"><?php the_date( 'd. m. Y' ); ?> </span>
+					<h5 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+					<!-- <span class="news-date news-date-sidebar"><?php the_date( 'd. m. Y' ); ?> </span> -->
 					<?php if (has_post_thumbnail()): ?>
 						<?php echo get_the_post_thumbnail( $page->ID, 'small' ); ?>
 					<?php else: ?>
