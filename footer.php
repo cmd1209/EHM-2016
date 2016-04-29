@@ -41,7 +41,8 @@
 					<div class="col col--12-of-12">
 
 						<p class="copyright">
-							&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.
+							&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. </br>
+							<a href="/impressum">Impressum / Imprint</a>
 						</p>
 					</div>
 				 </div> <!--  end stage -->

@@ -8,7 +8,7 @@
 					<h5 class="news-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 					<!-- <span class="news-date news-date-sidebar"><?php the_date( 'd. m. Y' ); ?> </span> -->
 					<?php if (has_post_thumbnail()): ?>
-						<?php echo get_the_post_thumbnail( $page->ID, 'small' ); ?>
+						<?php echo get_the_post_thumbnail( $page->ID, 'large' ); ?>
 					<?php else: ?>
 					<?php endif; ?>
 					<p class="news-text"><?php the_excerpt(); ?></p>

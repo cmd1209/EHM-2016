@@ -2,6 +2,8 @@ section.intro
   height: 100vh
   @media all and (max-width: $small-break)
     height: auto
+.intro-columns
+  margin-bottom: 4.5em
 .intro-key
   position: relative
   width: 100%
@@ -15,9 +17,8 @@ section.intro
     @include transition(all 0.5s ease)
     @include filter(grayscale(0%))
   @media all and (max-width: $medium-break)
-    height: 30vh
-  @media all and (max-width: $small-break)
-    height: 100vh
+    height: 27vh
+    margin-bottom: 0
 
 .full-area-link
   display: block
@@ -39,21 +40,17 @@ section.intro
   @include transform(translatey(-100%))
   @include transition(all 0.25s ease)
   @media all and (max-width: $medium-break)
-    @include transform(translateX(-50%)translateY(-100%))
-    font-size: 1.75em
-    width: auto!important
-    min-height: auto!important
-    top: 100%
+    font-size: 1.30em
+    min-height: 20px
+    background-color: rgba(white,0.75)
+    width: 100%!important
+    overflow: hidden
     left: 50%
     text-align: center
-    padding: 4px 16px
-  // &:after
-  //   margin-left: 8px
-  //   content: ""
-  //   display: inline-block
-  //   border-top: 8px solid transparent
-  //   border-bottom: 8px solid transparent
-  //   border-left: 8px solid $primary-color
+    padding: 1em
+    top: 0
+    @include transform(translatey(0%)translateX(-50%))
+
 .intro-subhead
   color: $primary-color
   font-size: 1.65em
@@ -103,5 +100,5 @@ section.intro
   @include transition(all 0.25s ease)
   @media all and (max-width: $medium-break)
     color: $secondary-color
-    padding: 8px 42px 8px 42px
+    background-color: rgba(white,0.2)
     @include transition(all 0.25s ease)

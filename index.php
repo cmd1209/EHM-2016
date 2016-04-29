@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section id="startcontent">
 <?php $currentlang = get_bloginfo('language'); if($currentlang=="de-DE"): ?>
-  <div class="flex-container">
+  <div class="flex-container intro-columns">
     <div class="flex-child">
       <?php $museumImage = wp_get_attachment_url( get_post_thumbnail_id(589) ); ?>
       <div class="intro-key museum" style="background:url(<?php echo $museumImage; ?>)center center;">
