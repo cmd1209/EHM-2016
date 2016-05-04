@@ -53,11 +53,11 @@
 				<?php get_template_part('searchform'); ?>
 			</div>
 
-			<div class="english-tooltip">
+			<!-- <div class="english-tooltip">
 				<h6>
 					We are working hard to bring our non-German speakers the best experience possible. Please visit us again shortly and we should have everything up-to-date.
 				</h6>
-			</div>
+			</div> -->
 
 			<?php if(is_home() ): ?>
 				<header class="extrawide">

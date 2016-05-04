@@ -101,12 +101,13 @@
 			overlay.fadeOut("fast");
 		});
 
-		$('#menu-item-579-en').mouseenter(function() {
-			$(".english-tooltip").fadeIn();
-		});
-		$('#menu-item-579-en').mouseleave(function() {
-			$(".english-tooltip").fadeOut();
-		});
+		// $('#menu-item-579-en').mouseenter(function() {
+		// 	$(".english-tooltip").fadeIn();
+		// });
+		// $('#menu-item-579-en').mouseleave(function() {
+		// 	$(".english-tooltip").fadeOut();
+		// });
+
 
 		searchactivator.toggle(function() {
 			searchfield.fadeIn("fast");
