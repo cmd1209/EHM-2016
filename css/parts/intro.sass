@@ -12,10 +12,8 @@ section.intro
   background-size: cover!important
   margin-bottom: 1em
   @include transition(all 0.25s ease)
-  @include filter(grayscale(55%))
   &:hover
     @include transition(all 0.5s ease)
-    @include filter(grayscale(0%))
   @media all and (max-width: $medium-break)
     height: 27vh
     margin-bottom: 0
