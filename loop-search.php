@@ -1,3 +1,4 @@
+<div class="row">
 <div class="col col--4-of-12">
 	<?php $i = 0; if (have_posts() ) : while (have_posts() ) :the_post();  if ($i % 3 == 0): ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -45,5 +46,7 @@
 		</article>
 	<?php  endif; $i++; ?>
 	<?php endwhile; endif; ?>
+
+</div>
 
 </div>
