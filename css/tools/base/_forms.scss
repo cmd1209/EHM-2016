@@ -1,6 +1,6 @@
 fieldset {
   background: lighten($base-border-color, 10);
-  border: 1px solid $base-border-color;
+  border: 0;
   margin: 0 0 ($base-line-height / 2) 0;
   padding: $base-line-height;
 }
@@ -31,9 +31,9 @@ textarea,
 select[multiple=multiple] {
   @include box-sizing(border-box);
   @include transition(border-color);
-  background-color: $muted-grey;
+  background-color: lighten($muted-grey, 10);
   border-radius: $form-border-radius;
-  border: 1px solid $form-border-color;
+  border: 0;
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
   font-size: $form-font-size;
