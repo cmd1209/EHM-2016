@@ -418,6 +418,9 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 \*------------------------------------*/
 
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
+
+add_filter( 'wpcf7_support_html5_fallback', '__return_true' );
+
 function create_post_type_html5()
 {
     register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
